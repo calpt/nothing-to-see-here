@@ -1,0 +1,28 @@
+name: Generate
+
+on:
+  push:
+    branches: [ master ]
+    paths: [ 'repo/**' ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+      - name: Run generation
+        run: |
+          python scripts/generate.py
+      - name: Commit
+        run: |
+          git config user.name "Adapter Hub Bert"
+          git config user.email "65732326+adapter-hub-bert@users.noreply.github.com"
+          git add gen
+          git commit -m "Re-generated index files."
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

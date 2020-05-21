@@ -1,21 +1,20 @@
 {
   "_meta": {
-    "id": "0a505c7c11072812d9e5e08c322eb188b447734c",
+    "id": "0a505c7c11072812d9e5e08c",
     "author": "Example Org.",
     "email": "mail@example.org",
     "url": "https://example.org",
     "citation": "@misc{pfeiffer2020adapterfusion,\r\n    title={AdapterFusion: Non-Destructive Task Composition for Transfer Learning},\r\n    author={Jonas Pfeiffer and Aishwarya Kamath and Andreas R\u00FCckl\u00E9 and Kyunghyun Cho and Iryna Gurevych},\r\n    year={2020},\r\n    eprint={2005.00247},\r\n    archivePrefix={arXiv},\r\n    primaryClass={cs.CL}\r\n}",
     "description": "MNLI task adapter in Pfeiffer architecture for BERT base.",
-    "files": [
-      {
+    "default_version": "1",
+    "files": {
+      "1": {
         "url": "http://adapter-hub.webredirect.org/repo/files/bert-sst-pfeiffer.zip",
         "sha1": "AB7017C11FC411676126667ADE5C5DF35C5A2FFE"
       }
-    ],
-    // these attributes are required for naming/ categorization in index 
+    },
     "task": "sentiment",
     "dataset": "sst",
-    // evaluation score on this task
     "score": 0.90
   },
   "config": {
@@ -33,7 +32,7 @@
     "residual_before_ln": true
   },
   "hidden_size": 768,
-  "model": "BertModel",
+  "model_type": "bert",
   "name": "sst",
   "type": "text_task"
 }
