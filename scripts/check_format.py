@@ -5,9 +5,7 @@ from os.path import join
 import sys
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
-
-
-ALLOWED_TYPES = ['text_task', 'text_lang', 'vision_task']
+from generate import AVAILABLE_TYPES
 
 
 def _violation(s):
@@ -33,7 +31,7 @@ def check_format(adapter_file, schema):
         return True
     # 3. check type
     has_error = False
-    if file_dict['type'] not in ALLOWED_TYPES:
+    if file_dict['type'] not in AVAILABLE_TYPES:
         _violation(f"Invalid adapter type '{file_dict['type']}' used.")
         has_error = True
     # 4. check config
