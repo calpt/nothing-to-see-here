@@ -20,9 +20,7 @@ jobs:
         run: |
           git config user.name "Adapter Hub Bert"
           git config user.email "65732326+adapter-hub-bert@users.noreply.github.com"
-          git add gen
-          git commit -m "Re-generated index files."
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git add dist
+          git commit -m "Generate index files."
+          git remote set-url origin https://x-access-token:${{ secrets.BOT_TOKEN }}@github.com/${{ github.repository }}
+          git push origin master
