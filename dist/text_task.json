@@ -1,30 +1,20 @@
 {
-    "sentiment": {
-        "sst": {
-            "0a505c7c11072812d9e5e08c322eb188b447734c": {
-                "default": "example-org",
-                "versions": {
-                    "example-org": "repo/example-org/bert_base_sst.json", 
-                    "example-org-augmented": "...",
-                    "adaptersoft": "repo/adaptersoft/bert_base_sst.json"
-                }
-            },
-            "04a4c12f68f1fe4e938eb4bf7cefea85262c405d": {
-                "default": "adaptersoft",
-                "versions": {
-                    "example-org": "repo/adaptersoft/roberta_base_sst.json"
-                }
-            }
-        },
-        "sst-augmented": {
-        }
-    },
     "nli": {
         "multinli": {
-            "0a505c7c11072812d9e5e08c322eb188b447734c": {
+            "0a505c7c11072812d9e5e08c": {
                 "default": "example-org",
                 "versions": {
                     "example-org": "repo/example-org/bert_base_mnli.json"
+                }
+            }
+        }
+    },
+    "sentiment": {
+        "sst": {
+            "0a5abc7c11072812d9e5e08c": {
+                "default": "example-org",
+                "versions": {
+                    "example-org": "repo/example-org/bert_base_sst.json"
                 }
             }
         }
