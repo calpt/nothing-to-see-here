@@ -11,6 +11,10 @@
       "1": {
         "url": "http://adapter-hub.webredirect.org/repo/files/bert-sst-pfeiffer.zip",
         "sha1": "AB7017C11FC411676126667ADE5C5DF35C5A2FFE"
+      },
+      "2": {
+        "url": "http://adapter-hub.webredirect.org/repo/files/bert-sst-pfeiffer.zip",
+        "sha1": "AB7017C11FC411676126667ADE5C5DF35C5A2FFE"
       }
     },
     "task": "sentiment",
