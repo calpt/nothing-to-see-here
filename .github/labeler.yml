@@ -1,15 +1,16 @@
-area:adapter:
+area/adapter:
   - repo/**/*
 
-area:config:
+area/config:
   - configs/**/*
 
-area:task:
+area/task:
   - tasks/**/*
 
-area:core:
+area/core:
   - /*
   - scripts/**/*
 
-invalid:
+"**invalid**":
   - dist/**/*
+  - repo/*
