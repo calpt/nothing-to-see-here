@@ -7,6 +7,7 @@ import sys
 
 
 AVAILABLE_TYPES = ['text_task', 'text_lang', 'vision_task']
+REPO_FOLDER = "repo"
 
 
 def generate_index(files, dist_folder="dist"):
@@ -42,7 +43,7 @@ def generate_index(files, dist_folder="dist"):
 
 
 if __name__ == "__main__":
-    repo_glob = join(sys.argv[1], "**", "*")
-    dist_folder = sys.argv[2] if len(sys.argv) > 2 else "dist"
+    repo_glob = join(REPO_FOLDER, "**", "*")
+    dist_folder = sys.argv[1] if len(sys.argv) > 1 else "dist"
     files = glob(repo_glob)
     generate_index(files, dist_folder=dist_folder)
