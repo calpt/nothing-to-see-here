@@ -5,7 +5,7 @@ from os.path import join
 import sys
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
-from generate import AVAILABLE_TYPES
+from generate import AVAILABLE_TYPES, REPO_FOLDER
 
 
 def _violation(s):
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     dir_path = os.path.dirname(os.path.realpath(__file__))
     with open(join(dir_path, 'adapter.schema.json'), 'r') as f:
         schema = json.load(f)
-    files = sys.argv[1:]
+    files = [f for f in sys.argv[1:] if f.startswith(REPO_FOLDER)]
     for file in files:
         has_error = check_format(file, schema)
         if has_error:

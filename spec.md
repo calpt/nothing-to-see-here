@@ -10,15 +10,15 @@
 
 ### Loading
 
-Adapters are loaded with: `model.load_adapter(<specifier>, <type>, config=<config>)`.
+Adapters are loaded with: `model.load_adapter(<specifier>, <type>, config=<config>, version=<version>)`.
 
 `<specifier>` can be one of the following iff globally unique:
 - `<task>`
 - `<task>/<dataset>`
 - `<dataset>`
-- `<task>@<org_name>-<custom_name>`
-- `<task>/<dataset>@<org_name>-<custom_name>`
-- `<dataset>@<org_name>-<custom_name>`
+- `<task>@<org_name>`
+- `<task>/<dataset>@<org_name>`
+- `<dataset>@<org_name>`
 
 ### File structure
 
@@ -33,7 +33,7 @@ Placed in `/<index>/<type>.json`.
             <id>: {
                 "default": "<org_name>-<custom_name>",
                 "versions": {
-                    "<org_name>-<custom_name>": "<org_name>/<file_name>.json"
+                    <org_name>: "<org_name>/<file_name>.json"
                     ...
                 }
             }

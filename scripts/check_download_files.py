@@ -1,6 +1,7 @@
 import json
 import sys
 from transformers import AutoConfig, AutoModel
+from generate import REPO_FOLDER
 
 
 def _violation(s):
@@ -34,7 +35,7 @@ def check_download(adapter_file):
 
 
 if __name__ == "__main__":
-    files = sys.argv[1:]
+    files = [f for f in sys.argv[1:] if f.startswith(REPO_FOLDER)]
     for file in files:
         has_error = check_download(file)
         if has_error:

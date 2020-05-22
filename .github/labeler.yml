@@ -8,7 +8,7 @@ area:task:
   - tasks/**/*
 
 area:core:
-  - ./*
+  - /*
   - scripts/**/*
 
 invalid:
