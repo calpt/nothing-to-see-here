@@ -31,7 +31,7 @@ Placed in `/<index>/<type>.json`.
     <task>: {
         <dataset>: {
             <id>: {
-                "default": "<org_name>-<custom_name>",
+                "default": "<org_name>",
                 "versions": {
                     <org_name>: "<org_name>/<file_name>.json"
                     ...

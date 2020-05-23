@@ -1,14 +1,14 @@
-name: Adapter Checks
+name: Checks
 
 on:
   pull_request:
     branches: [ master ]
-    paths: [ 'repo/**' ]
+    paths: [ 'repo/**', 'configs/**' ]
 
 jobs:
   # Check if the file format seems valid
   check_format:
-    name: Config file format
+    name: File format
     runs-on: ubuntu-latest
     # output changed files for the next step
     outputs:
@@ -24,10 +24,16 @@ jobs:
           python-version: 3.6
       - name: Install
         run: |
-          pip install jsonschema
-      - name: Run format checking
+          pip install -r scripts/requirements.txt
+      - name: Adapter entry format checking
         run: |
-          python scripts/check_format.py ${{ steps.files.outputs.added_modified }}
+          python scripts/check_format.py adapter ${{ steps.files.outputs.added_modified }}
+      - name: Architecture entry format checking
+        run: |
+          python scripts/check_format.py architecture ${{ steps.files.outputs.added_modified }}
+      - name: File generation test
+        run: |
+          python scripts/generate.py
   # Check if the provided download links refer to valid weights
   check_download_files:
     name: Download files

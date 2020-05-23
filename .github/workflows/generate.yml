@@ -15,7 +15,7 @@ jobs:
           python-version: 3.6
       - name: Install
         run: |
-          pip install pyyaml
+          pip install -r scripts/requirements.txt
       - name: Run generation
         run: |
           python scripts/generate.py
@@ -24,6 +24,6 @@ jobs:
           git config user.name "Adapter Hub Bert"
           git config user.email "65732326+adapter-hub-bert@users.noreply.github.com"
           git add dist
-          git commit -m "Generate index files."
+          git commit -m "Generate files."
           git remote set-url origin https://x-access-token:${{ secrets.BOT_TOKEN }}@github.com/${{ github.repository }}
           git push origin master

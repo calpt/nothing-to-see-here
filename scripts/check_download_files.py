@@ -25,6 +25,7 @@ def check_download(adapter_file):
             model.load_adapter(
                 file['url'],
                 adapter_dict['type'],
+                config=adapter_dict['config'],
                 load_as=version,
                 checksum=file['sha1']
             )
