@@ -31,7 +31,7 @@ def generate_adapter_index(files, dist_folder="dist", config_index=None):
         path_split = file.split(os.sep)
         a_type = adapter_dict['type']
         a_task = adapter_dict['_meta']['task']
-        a_name = adapter_dict['_meta']['dataset']
+        a_name = adapter_dict['_meta']['subtask']
         a_id = adapter_dict['_meta']['id']
         org_name = path_split[-2]
         if a_type not in AVAILABLE_TYPES:

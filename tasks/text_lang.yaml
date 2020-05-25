@@ -1,6 +1,6 @@
 ---
 task: en
-dataset: wiki
+subtask: wiki
 description: ""
 url: ""
 citation: ""
@@ -8,7 +8,7 @@ metric: ""
 
 ---
 task: de
-dataset: wiki
+subtask: wiki
 description: ""
 url: ""
 citation: ""

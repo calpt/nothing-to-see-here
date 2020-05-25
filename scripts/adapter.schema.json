@@ -21,7 +21,7 @@
                 "default_version",
                 "files",
                 "task",
-                "dataset"
+                "subtask"
             ],
             "additionalProperties": true,
             "properties": {
@@ -92,7 +92,7 @@
                     "type": "string",
                     "minLength": 1
                 },
-                "dataset": {
+                "subtask": {
                     "type": "string",
                     "minLength": 1
                 },

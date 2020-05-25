@@ -1,6 +1,6 @@
 ---
 task: sentiment
-dataset: sst
+subtask: sst
 description: |
   The Stanford Sentiment Treebank.
 url: "https://nlp.stanford.edu/sentiment/index.html"
@@ -17,7 +17,7 @@ metric:
 
 ---
 task: nli
-dataset: multinli
+subtask: multinli
 description: |
   The MultiNLI dataset.
 url: "https://github.com/NYU-MLL/multiNLI"

@@ -14,7 +14,7 @@
       }
     },
     "task": "nli",
-    "dataset": "multinli",
+    "subtask": "multinli",
     "score": 0.90
   },
   "config": "pfeiffer",
