@@ -46,6 +46,7 @@ jobs:
           python-version: 3.6
       - name: Install Framework
         run: |
+          pip install -r scripts/requirements.txt
           pip install torch
           pip install git+https://${{ secrets.BOT_TOKEN }}@github.com/calpt/adapter-transformers.git
       - name: Check download files
