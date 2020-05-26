@@ -16,6 +16,12 @@
                 "versions": {
                     "example-org": "repo/example-org/bert_base_sst.json"
                 }
+            },
+            "2f68aea9c315ba3bb3ccb683": {
+                "default": "example-org",
+                "versions": {
+                    "example-org": "repo/example-org/text_task-sst-bert-768-c315ba3bb3ccb683.json"
+                }
             }
         }
     }
