@@ -1,4 +1,5 @@
 import json
+import logging
 import sys
 from transformers import AutoConfig, AutoModel
 from generate import REPO_FOLDER
@@ -36,6 +37,8 @@ def check_download(adapter_file):
 
 
 if __name__ == "__main__":
+    logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+
     files = [f for f in sys.argv[1:] if f.startswith(REPO_FOLDER)]
     for file in files:
         has_error = check_download(file)

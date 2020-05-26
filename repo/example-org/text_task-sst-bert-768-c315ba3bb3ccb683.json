@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "author": "Example Org.",
+    "citation": "@misc{pfeiffer2020adapterfusion,\r\n    title={AdapterFusion: Non-Destructive Task Composition for Transfer Learning},\r\n    author={Jonas Pfeiffer and Aishwarya Kamath and Andreas R\u00FCckl\u00E9 and Kyunghyun Cho and Iryna Gurevych},\r\n    year={2020},\r\n    eprint={2005.00247},\r\n    archivePrefix={arXiv},\r\n    primaryClass={cs.CL}\r\n}",
+    "default_version": "1",
+    "description": "MNLI task adapter in Pfeiffer architecture for BERT base.",
+    "email": "mail@example.org",
+    "files": {
+      "1": {
+        "sha1": "ee39c07db6f4545a8c1ca4098cd3f15275a3f6cd",
+        "url": "http://adapter-hub.webredirect.org/repo/files/text_task-sst-bert-768-c315ba3bb3ccb683.zip"
+      }
+    },
+    "id": "2f68aea9c315ba3bb3ccb683",
+    "score": 0.90,
+    "task": "sentiment",
+    "subtask": "sst",
+    "url": "https://example.org"
+  },
+  "config": {
+    "LN_after": false,
+    "LN_before": false,
+    "MH_Adapter": false,
+    "Output_Adapter": true,
+    "adapter_residual_before_ln": false,
+    "attention_type": "sent-lvl-dynamic",
+    "new_attention_norm": false,
+    "non_linearity": "relu",
+    "original_ln_after": true,
+    "original_ln_before": true,
+    "reduction_factor": 16,
+    "residual_before_ln": true
+  },
+  "hidden_size": 768,
+  "model_type": "bert",
+  "name": "sst",
+  "type": "text_task"
+}
