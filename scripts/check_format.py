@@ -20,9 +20,9 @@ def check_adapter_format(adapter_file, schema):
     # 1. load to dict
     with open(adapter_file, 'r') as f:
         try:
-            file_dict = json.load(f)
-        except JSONDecodeError as e:
-            _violation("[{}]: {}".format(e.__class__.__name__, e.msg))
+            file_dict = yaml.load(f, yaml.FullLoader)
+        except yaml.YAMLError as e:
+            _violation("[{}]: {}".format(e.__class__.__name__, e))
             return True
     # 2. validate against schema
     try:
@@ -39,9 +39,8 @@ def check_adapter_format(adapter_file, schema):
     # -> identifier verified in generate.py
     # 5. check meta section
     # -> duplicate check in generate.py
-    meta_dict = file_dict['_meta']
     # 6. check files
-    if not meta_dict['default_version'] in meta_dict['files']:
+    if not file_dict['default_version'] in file_dict['files']:
         _violation(f"Specified default_version is not in files.")
         has_error = True
     return has_error

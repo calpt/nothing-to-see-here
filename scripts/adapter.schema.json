@@ -4,105 +4,99 @@
     "type": "object",
     "title": "Adapter-Hub adapter entry",
     "required": [
-        "_meta",
+        "id",
+        "author",
+        "default_version",
+        "files",
+        "task",
+        "subtask",
         "config",
         "hidden_size",
         "model_type",
         "name",
         "type"
     ],
-    "additionalProperties": false,
+    "additionalProperties": true,
     "properties": {
-        "_meta": {
+        "id": {
+            "type": "string",
+            "minLength": 24,
+            "maxLength": 24
+        },
+        "author": {
+            "type": "string",
+            "minLength": 1
+        },
+        "email": {
+            "type": "string",
+            "format": "email"
+        },
+        "url": {
+            "type": "string",
+            "format": "uri"
+        },
+        "citation": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "default_version": {
+            "type": "string"
+        },
+        "files": {
             "type": "object",
-            "required": [
-                "id",
-                "author",
-                "default_version",
-                "files",
-                "task",
-                "subtask"
-            ],
-            "additionalProperties": true,
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "minLength": 24,
-                    "maxLength": 24
-                },
-                "author": {
-                    "type": "string",
-                    "minLength": 1
-                },
-                "email": {
-                    "type": "string",
-                    "format": "email"
-                },
-                "url": {
-                    "type": "string",
-                    "format": "uri"
-                },
-                "citation": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "default_version": {
-                    "type": "string"
-                },
-                "files": {
+            "minProperties": 1,
+            "additionalProperties": false,
+            "patternProperties": {
+                ".*": {
                     "type": "object",
-                    "minProperties": 1,
+                    "anyOf": [
+                        {
+                            "required": [
+                                "url",
+                                "sha1"
+                            ]
+                        },
+                        {
+                            "required": [
+                                "url",
+                                "sha256"
+                            ]
+                        }
+                    ],
                     "additionalProperties": false,
-                    "patternProperties": {
-                        ".*": {
-                            "type": "object",
-                            "anyOf": [
-                                {
-                                    "required": [
-                                        "url",
-                                        "sha1"
-                                    ]
-                                },
-                                {
-                                    "required": [
-                                        "url",
-                                        "sha256"
-                                    ]
-                                }
-                            ],
-                            "additionalProperties": false,
-                            "properties": {
-                                "url": {
-                                    "type": "string",
-                                    "format": "uri"
-                                },
-                                "sha1": {
-                                    "type": "string"
-                                },
-                                "sha256": {
-                                    "type": "string"
-                                }
-                            }
+                    "properties": {
+                        "url": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "sha1": {
+                            "type": "string"
+                        },
+                        "sha256": {
+                            "type": "string"
                         }
                     }
-                },
-                "task": {
-                    "type": "string",
-                    "minLength": 1
-                },
-                "subtask": {
-                    "type": "string",
-                    "minLength": 1
-                },
-                "score": {
-                    "type": "number"
                 }
             }
         },
+        "task": {
+            "type": "string",
+            "minLength": 1
+        },
+        "subtask": {
+            "type": "string",
+            "minLength": 1
+        },
+        "score": {
+            "type": "number"
+        },
         "config": {
-            "type": ["object", "string"],
+            "type": [
+                "object",
+                "string"
+            ],
             "additionalProperties": true,
             "minProperties": 1,
             "minLength": 1
