@@ -1,0 +1,17 @@
+task: nli
+subtask: multinli
+description: |
+  The MultiNLI dataset.
+url: "https://github.com/NYU-MLL/multiNLI"
+citation: |
+  @misc{williams2017broadcoverage,
+    title={A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference},
+    author={Adina Williams and Nikita Nangia and Samuel R. Bowman},
+    year={2017},
+    eprint={1704.05426},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+  }
+metric:
+  name: accuracy
+  higher_is_better: true

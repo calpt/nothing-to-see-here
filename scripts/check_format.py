@@ -40,7 +40,7 @@ def check_adapter_format(adapter_file, schema):
     # 5. check meta section
     # -> duplicate check in generate.py
     # 6. check files
-    if not file_dict['default_version'] in file_dict['files']:
+    if not file_dict['default_version'] in [file['version'] for file in file_dict['files']]:
         _violation(f"Specified default_version is not in files.")
         has_error = True
     return has_error

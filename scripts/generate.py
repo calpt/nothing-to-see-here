@@ -42,10 +42,14 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
         ### Create generated json file
         gen_file = join(dist_folder, REPO_FOLDER, org_name, splitext(basename(file))[0]+".json")
         os.makedirs(dirname(gen_file), exist_ok=True)
+        files = {}
+        for file in adapter_dict['files']:
+            version = file.pop('version')
+            files[version] = file
         gen_dict = {
             'id': a_id,
             'default_version': adapter_dict['default_version'],
-            'files': adapter_dict['files'],
+            'files': files,
             'config': config
         }
         with open(gen_file, 'w') as f:
