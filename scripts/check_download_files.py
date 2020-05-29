@@ -1,6 +1,7 @@
 import json
 import logging
 import sys
+import yaml
 from transformers import AutoConfig, AutoModel
 from generate import REPO_FOLDER
 
@@ -14,13 +15,13 @@ def check_download(adapter_file):
     """
     print("-"*5, f"Checking {adapter_file}", "-"*5)
     with open(adapter_file, 'r') as f:
-        adapter_dict = json.load(f)
+        adapter_dict = yaml.load(f, yaml.FullLoader)
     config = AutoConfig.for_model(
         adapter_dict['model_type'],
         hidden_size=adapter_dict['hidden_size']
     )
     model = AutoModel.from_config(config)
-    for version, file in adapter_dict['_meta']['files'].items():
+    for version, file in adapter_dict['files'].items():
         try:
             # TODO add support for other checksums
             model.load_adapter(

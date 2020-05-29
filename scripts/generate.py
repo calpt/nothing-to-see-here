@@ -2,37 +2,52 @@ from collections import defaultdict
 from glob import glob
 import json
 import os
-from os.path import join
+from os.path import join, basename, splitext
 import sys
 import yaml
 
 
-AVAILABLE_TYPES = ['text_task', 'text_lang', 'vision_task']
+AVAILABLE_TYPES = ['text_task', 'text_lang']
 REPO_FOLDER = "repo"
 ARCHITECTURE_FOLDER = "architectures"
 
 
-def generate_adapter_index(files, dist_folder="dist", config_index=None):
-    """Generates index files.
+def generate_adapter_repo(files, dist_folder="dist", config_index=None):
+    """Generates adapter repo and index files.
     """
     index = defaultdict(
         lambda: defaultdict(
             lambda: defaultdict(
                 lambda: defaultdict(dict))))
+    os.makedirs(join(dist_folder, REPO_FOLDER), exist_ok=True)
     # add all files to index
     for file in files:
         with open(file, 'r') as f:
-            adapter_dict = json.load(f)
+            adapter_dict = yaml.load(f, yaml.FullLoader)
         if config_index and isinstance(adapter_dict['config'], str):
             if adapter_dict['config'] not in config_index:
                 raise ValueError(
                         "Unknown adapter config identifier '{}'.".format(adapter_dict['config'])
                     )
+            config = config_index[adapter_dict['config']]
+        else:
+            config = adapter_dict['config']
+        a_id = adapter_dict['id']
+        ### Create generated json file
+        gen_dict = {
+            'id': a_id,
+            'default_version': adapter_dict['default_version'],
+            'files': adapter_dict['files'],
+            'config': config
+        }
+        file_name = splitext(basename(file))[0]+".json"
+        with open(join(dist_folder, REPO_FOLDER, file_name), 'w') as f:
+            json.dump(gen_dict, f, indent=2, sort_keys=True)
+        ### Create index entry
         path_split = file.split(os.sep)
         a_type = adapter_dict['type']
-        a_task = adapter_dict['_meta']['task']
-        a_name = adapter_dict['_meta']['subtask']
-        a_id = adapter_dict['_meta']['id']
+        a_task = adapter_dict['task']
+        a_name = adapter_dict['subtask']
         org_name = path_split[-2]
         if a_type not in AVAILABLE_TYPES:
             raise ValueError("Invalid type '{}'.".format(a_type))
@@ -77,4 +92,4 @@ if __name__ == "__main__":
     # generate adapter files
     repo_glob = join(REPO_FOLDER, "**", "*")
     files = glob(repo_glob)
-    generate_adapter_index(files, dist_folder=dist_folder, config_index=config_index)
+    generate_adapter_repo(files, dist_folder=dist_folder, config_index=config_index)
