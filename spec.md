@@ -47,7 +47,7 @@ Placed in `/<index>/<type>.json`.
 
 #### Config files
 
-Placed in `/repo/<org_name>/<file_name>.json`.
+Placed in `/adapters/<org_name>/<file_name>.json`.
 
 ```
 {

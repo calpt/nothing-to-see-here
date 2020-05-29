@@ -1,8 +1,8 @@
 area/adapter:
-  - repo/**/*
+  - adapters/**/*
 
-area/config:
-  - configs/**/*
+area/architecture:
+  - architectures/**/*
 
 area/task:
   - tasks/**/*
@@ -13,4 +13,4 @@ area/core:
 
 "**invalid**":
   - dist/**/*
-  - repo/*
+  - adapters/*

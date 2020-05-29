@@ -3,7 +3,7 @@ name: Checks
 on:
   pull_request:
     branches: [ master ]
-    paths: [ 'repo/**', 'configs/**' ]
+    paths: [ 'adapters/**', 'architectures/**' ]
 
 jobs:
   # Check if the file format seems valid

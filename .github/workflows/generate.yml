@@ -3,7 +3,7 @@ name: Generate
 on:
   push:
     branches: [ master ]
-    paths: [ 'repo/**', 'configs/**' ]
+    paths: [ 'adapters/**', 'architectures/**' ]
 
 jobs:
   generate:

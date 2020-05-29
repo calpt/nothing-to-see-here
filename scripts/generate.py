@@ -8,7 +8,7 @@ import yaml
 
 
 AVAILABLE_TYPES = ['text_task', 'text_lang']
-REPO_FOLDER = "repo"
+REPO_FOLDER = "adapters"
 ARCHITECTURE_FOLDER = "architectures"
 
 
