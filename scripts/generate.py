@@ -2,7 +2,7 @@ from collections import defaultdict
 from glob import glob
 import json
 import os
-from os.path import join, basename, splitext
+from os.path import join, basename, dirname, relpath, splitext
 import sys
 import yaml
 
@@ -19,7 +19,6 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
         lambda: defaultdict(
             lambda: defaultdict(
                 lambda: defaultdict(dict))))
-    os.makedirs(join(dist_folder, REPO_FOLDER), exist_ok=True)
     # add all files to index
     for file in files:
         with open(file, 'r') as f:
@@ -33,17 +32,6 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
         else:
             config = adapter_dict['config']
         a_id = adapter_dict['id']
-        ### Create generated json file
-        gen_dict = {
-            'id': a_id,
-            'default_version': adapter_dict['default_version'],
-            'files': adapter_dict['files'],
-            'config': config
-        }
-        file_name = splitext(basename(file))[0]+".json"
-        with open(join(dist_folder, REPO_FOLDER, file_name), 'w') as f:
-            json.dump(gen_dict, f, indent=2, sort_keys=True)
-        ### Create index entry
         path_split = file.split(os.sep)
         a_type = adapter_dict['type']
         a_task = adapter_dict['task']
@@ -51,6 +39,18 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
         org_name = path_split[-2]
         if a_type not in AVAILABLE_TYPES:
             raise ValueError("Invalid type '{}'.".format(a_type))
+        ### Create generated json file
+        gen_file = join(dist_folder, REPO_FOLDER, org_name, splitext(basename(file))[0]+".json")
+        os.makedirs(dirname(gen_file), exist_ok=True)
+        gen_dict = {
+            'id': a_id,
+            'default_version': adapter_dict['default_version'],
+            'files': adapter_dict['files'],
+            'config': config
+        }
+        with open(gen_file, 'w') as f:
+            json.dump(gen_dict, f, indent=2, sort_keys=True)
+        ### Create index entry
         id_dict = index[a_type][a_task][a_name][a_id]
         if "versions" not in id_dict:
             id_dict["versions"] = {}
@@ -60,7 +60,7 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
                         a_task, a_name, org_name
                     )
                 )
-        id_dict["versions"][org_name] = file
+        id_dict["versions"][org_name] = relpath(gen_file, dist_folder)
         # TODO change default version to something more useful
         index[a_type][a_task][a_name][a_id]["default"] = org_name
     # write index files to disc

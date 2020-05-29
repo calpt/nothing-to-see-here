@@ -27,7 +27,6 @@ files:
 score: 0.90
 
 config: pfeiffer
-
 hidden_size: 768
 model_type: bert
 name: sst
