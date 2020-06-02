@@ -1,4 +1,4 @@
-id: pfeiffer
+name: pfeiffer
 displayname: Pfeiffer Architecture
 description: |
   Original Pfeiffer adapter architecture for task and language adapters with reduction factor 16.

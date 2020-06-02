@@ -4,12 +4,14 @@ import json
 import os
 from os.path import join, basename, dirname, relpath, splitext
 import sys
+import shutil
 import yaml
 
 
 AVAILABLE_TYPES = ['text_task', 'text_lang']
 REPO_FOLDER = "adapters"
 ARCHITECTURE_FOLDER = "architectures"
+INDEX_FOLDER = "index_{}"
 
 
 def generate_adapter_repo(files, dist_folder="dist", config_index=None):
@@ -18,7 +20,8 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
     index = defaultdict(
         lambda: defaultdict(
             lambda: defaultdict(
-                lambda: defaultdict(dict))))
+                lambda: defaultdict(
+                    lambda: defaultdict(dict)))))
     # add all files to index
     for file in files:
         with open(file, 'r') as f:
@@ -31,8 +34,9 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
             config = config_index[adapter_dict['config']]
         else:
             config = adapter_dict['config']
-        a_id = adapter_dict['id']
         path_split = file.split(os.sep)
+        a_model_name = adapter_dict['model_name']
+        a_id = adapter_dict['config_id']
         a_type = adapter_dict['type']
         a_task = adapter_dict['task']
         a_name = adapter_dict['subtask']
@@ -47,15 +51,15 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
             version = file.pop('version')
             files[version] = file
         gen_dict = {
-            'id': a_id,
+            'config_id': a_id,
             'default_version': adapter_dict['default_version'],
             'files': files,
-            'config': config
+            # 'config': config
         }
         with open(gen_file, 'w') as f:
             json.dump(gen_dict, f, indent=2, sort_keys=True)
         ### Create index entry
-        id_dict = index[a_type][a_task][a_name][a_id]
+        id_dict = index[a_type][a_model_name][a_task][a_name][a_id]
         if "versions" not in id_dict:
             id_dict["versions"] = {}
         if org_name in id_dict["versions"]:
@@ -66,11 +70,18 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
                 )
         id_dict["versions"][org_name] = relpath(gen_file, dist_folder)
         # TODO change default version to something more useful
-        index[a_type][a_task][a_name][a_id]["default"] = org_name
+        id_dict["default"] = org_name
     # write index files to disc
     for a_type, adapters in index.items():
-        with open(join(dist_folder, "adapters_"+a_type+".json"), 'w') as f:
-            json.dump(adapters, f, indent=4, sort_keys=True)
+        for a_model_name, adapters in adapters.items():
+            index_file = join(
+                dist_folder,
+                INDEX_FOLDER.format(a_type),
+                "{}.json".format(a_model_name)
+            )
+            os.makedirs(dirname(index_file), exist_ok=True)
+            with open(index_file, 'x') as f:
+                json.dump(adapters, f, indent=4, sort_keys=True)
     return index
 
 
@@ -79,16 +90,20 @@ def generate_architecture_index(files, dist_folder="dist"):
     for file in files:
         with open(file, 'r') as f:
             config = yaml.load(f, yaml.FullLoader)
-        if config['id'] in index:
+        if config['name'] in index:
             raise ValueError("Duplicate adapter architecture id '{}'".format(config['id']))
-        index[config['id']] = config['config']
-    with open(join(dist_folder, "{}.json".format(ARCHITECTURE_FOLDER)), 'w') as f:
+        index[config['name']] = config['config']
+    with open(join(dist_folder, "{}.json".format(ARCHITECTURE_FOLDER)), 'x') as f:
         json.dump(index, f, indent=4, sort_keys=True)
     return index
 
 
 if __name__ == "__main__":
     dist_folder = sys.argv[1] if len(sys.argv) > 1 else "dist"
+    # clean up
+    if os.path.isdir(dist_folder):
+        shutil.rmtree(dist_folder)
+    os.makedirs(dist_folder)
     # generate config files
     config_glob = join(ARCHITECTURE_FOLDER, "*")
     files = glob(config_glob)

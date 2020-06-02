@@ -1,7 +1,9 @@
-id: "2f68aea9c315ba3bb3ccb683"
+model_name: bert-base-uncased
+type: text_task
 task: sentiment
 subtask: sst
-type: "text_task"
+config_id: c315ba3bb3ccb683
+config: pfeiffer
 description: |
   MNLI task adapter in Pfeiffer architecture for BERT base.
 author: "Example Org."
@@ -24,9 +26,6 @@ files:
     sha1: "ee39c07db6f4545a8c1ca4098cd3f15275a3f6cd"
     url: "http://adapter-hub.webredirect.org/repo/files/text_task-sst-bert-768-c315ba3bb3ccb683.zip"
 
-score: 0.90
-
-config: pfeiffer
 hidden_size: 768
 model_type: bert
 name: sst

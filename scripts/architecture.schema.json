@@ -4,7 +4,7 @@
     "type": "object",
     "title": "Adapter-Hub architecture entry",
     "required": [
-        "id",
+        "name",
         "displayname",
         "description",
         "citation",
@@ -12,7 +12,7 @@
     ],
     "additionalProperties": false,
     "properties": {
-        "id": {
+        "name": {
             "type": "string",
             "minLength": 1
         },
