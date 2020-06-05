@@ -29,3 +29,9 @@ jobs:
             git remote set-url origin https://x-access-token:${{ secrets.BOT_TOKEN }}@github.com/${{ github.repository }}
             git push origin master
           fi
+      - name: Trigger website build
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          repository: calpt/adapter-hub-web
+          event-type: build

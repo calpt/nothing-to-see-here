@@ -9,7 +9,6 @@ description: |
 author: "Example Org."
 email: "mail@example.org"
 url: "https://example.org"
-twitter: ""
 
 citation: |
   @misc{pfeiffer2020adapterfusion,
