@@ -1,5 +1,6 @@
 task: nli
 subtask: multinli
+displayname: MultiNLI
 description: |
   The MultiNLI dataset.
 url: "https://github.com/NYU-MLL/multiNLI"

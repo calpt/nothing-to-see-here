@@ -1,0 +1,7 @@
+task: en
+subtask: wiki
+description: |
+  Language modeling for the English language on Wikipedia.
+url: ""
+citation: ""
+metric: ""
