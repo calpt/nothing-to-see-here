@@ -33,5 +33,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.BOT_TOKEN }}
-          repository: calpt/adapter-hub-web
+          repository: Adapter-Hub/website
           event-type: build

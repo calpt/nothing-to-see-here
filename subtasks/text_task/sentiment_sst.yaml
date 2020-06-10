@@ -1,5 +1,6 @@
 task: sentiment
 subtask: sst
+displayname: Stanford Sentiment Treebank
 description: |
   The Stanford Sentiment Treebank.
 url: "https://nlp.stanford.edu/sentiment/index.html"
