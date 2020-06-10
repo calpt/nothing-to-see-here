@@ -21,14 +21,14 @@ def check_download(adapter_file):
         hidden_size=adapter_dict['hidden_size']
     )
     model = AutoModel.from_config(config)
-    for version, file in adapter_dict['files'].items():
+    for file in adapter_dict['files']:
         try:
             # TODO add support for other checksums
             model.load_adapter(
                 file['url'],
                 adapter_dict['type'],
                 config=adapter_dict['config'],
-                load_as=version,
+                load_as=file['version'],
                 checksum=file['sha1']
             )
         except Exception as e:
