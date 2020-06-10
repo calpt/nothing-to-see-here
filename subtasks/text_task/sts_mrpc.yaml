@@ -1,0 +1,16 @@
+task: sts
+subtask: mrpc
+displayname: MRPC
+description: |
+  Microsoft Research Paraphrase Corpus 
+url: "https://www.microsoft.com/en-us/download/details.aspx?id=52398"
+citation: |
+  @inproceedings{Dolan2005AutomaticallyCA,
+    title={Automatically Constructing a Corpus of Sentential Paraphrases},
+    author={William B. Dolan and Chris Brockett},
+    booktitle={IWP@IJCNLP},
+    year={2005}
+  }
+metric: 
+  name: accuracy
+  higher_is_better: true
