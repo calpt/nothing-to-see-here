@@ -8,5 +8,15 @@
                 }
             }
         }
+    },
+    "sts": {
+        "mrpc": {
+            "111c481840064218": {
+                "default": "calpt",
+                "versions": {
+                    "calpt": "adapters/calpt/bert-base-uncased_mrpc_pfeiffer.json"
+                }
+            }
+        }
     }
 }
