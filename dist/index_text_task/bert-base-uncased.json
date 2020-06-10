@@ -1,6 +1,12 @@
 {
     "sentiment": {
         "sst": {
+            "111c481840064218": {
+                "default": "calpt",
+                "versions": {
+                    "calpt": "adapters/calpt/bert-base-uncased_sst-2_pfeiffer.json"
+                }
+            },
             "c315ba3bb3ccb683": {
                 "default": "example-org",
                 "versions": {
