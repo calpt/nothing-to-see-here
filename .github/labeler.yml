@@ -6,6 +6,7 @@ area/architecture:
 
 area/task:
   - tasks/**/*
+  - subtasks/**/*
 
 area/core:
   - /*
