@@ -77,7 +77,7 @@ if __name__ == "__main__":
         sys.exit("Invalid file_type '{}'".format(file_type))
     # load schema
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    with open(join(dir_path, '{}.schema.json'.format(file_type)), 'r') as f:
+    with open(join(dir_path, 'schemas', '{}.schema.json'.format(file_type)), 'r') as f:
         schema = json.load(f)
     # check files
     for file in files:

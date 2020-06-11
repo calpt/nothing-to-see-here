@@ -3,6 +3,7 @@
     "$id": "http://adapterhub.ml/adapter.schema.json",
     "type": "object",
     "title": "Adapter-Hub adapter entry",
+    "description": "Defines a single adapter entry in Adapter-Hub",
     "required": [
         "model_name",
         "config_id",
@@ -16,40 +17,50 @@
         "model_type",
         "type"
     ],
-    "additionalProperties": true,
+    "additionalProperties": false,
     "properties": {
         "model_name": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "The string identifier of the pre-trained model (by which it is identified at Huggingface).",
+            "examples": ["bert-base-uncased"]
         },
         "config_id": {
             "type": "string",
             "minLength": 16,
-            "maxLength": 16
+            "maxLength": 16,
+            "description": "The calculated 16-digit config dictionary id."
         },
         "author": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "The name of the author(s) of this adapter."
         },
         "email": {
             "type": "string",
-            "format": "email"
+            "format": "email",
+            "description": "A contact email of the author(s)."
         },
         "url": {
             "type": "string",
-            "format": "uri"
+            "format": "uri",
+            "description": "A URL providing more information on this adapter/ the authors/ the organization."
         },
         "citation": {
-            "type": "string"
+            "type": "string",
+            "description": "A bibtex citation of the work related to this adapter."
         },
         "description": {
-            "type": "string"
+            "type": "string",
+            "description": "A short description of this adapter."
         },
         "default_version": {
-            "type": "string"
+            "type": "string",
+            "description": "The version to be downloaded if no version is explicitly stated."
         },
         "files": {
             "type": "array",
+            "description": "A list of different versions of this adapter available for download.",
             "minItems": 1,
             "items": {
                 "type": "object",
@@ -76,7 +87,8 @@
                     },
                     "url": {
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "description": "Download URL pointing to a zip folder containing the adapter module."
                     },
                     "sha1": {
                         "type": "string"
@@ -89,33 +101,42 @@
         },
         "task": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "The string identifier of the task this adapter belongs to."
         },
         "subtask": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "The string identifier of the subtask this adapter belongs to."
         },
         "score": {
-            "type": "number"
+            "type": "number",
+            "$comment": "$hidden"
         },
         "config": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "The string identifier of the adapter architecture (must be available in architecture)."
         },
         "hidden_size": {
-            "type": "integer"
+            "type": "integer",
+            "description": "The hidden size of the model"
         },
         "model_type": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "The model type.",
+            "examples": ["bert"]
         },
         "name": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "$comment": "$hidden"
         },
         "type": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "The type of adapter (one of the options available in `adapter_type`."
         }
     }
 }

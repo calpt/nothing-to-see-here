@@ -1,9 +1,9 @@
-name: Generate Dist
+name: Generate Templates
 
 on:
   push:
     branches: [ master ]
-    paths: [ 'adapters/**', 'architectures/**' ]
+    paths: [ 'scripts/schemas/**' ]
 
 jobs:
   generate:
@@ -18,20 +18,14 @@ jobs:
           pip install -r scripts/requirements.txt
       - name: Run generation
         run: |
-          python scripts/generate.py
+          python scripts/templates.py
       - name: Commit
         run: |
           git config user.name "Adapter Hub Bert"
           git config user.email "65732326+adapter-hub-bert@users.noreply.github.com"
-          git add dist
+          git add TEMPLATES
           if [[ `git status --porcelain` ]]; then
-            git commit -m "Generate dist files."
+            git commit -m "Generate templates."
             git remote set-url origin https://x-access-token:${{ secrets.BOT_TOKEN }}@github.com/${{ github.repository }}
             git push origin master
           fi
-      - name: Trigger website build
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.BOT_TOKEN }}
-          repository: Adapter-Hub/website
-          event-type: build

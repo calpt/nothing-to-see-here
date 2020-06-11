@@ -3,6 +3,7 @@
     "$id": "http://adapterhub.ml/architecture.schema.json",
     "type": "object",
     "title": "Adapter-Hub architecture entry",
+    "description": "Defines an adapter architecture for Adapter-Hub.",
     "required": [
         "name",
         "displayname",
@@ -14,14 +15,19 @@
     "properties": {
         "name": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "The short identifier of this architecture",
+            "examples": ["pfeiffer"]
         },
         "displayname": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "The full name of the architecture that should be displayed."
         },
         "description": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 500,
+            "description": "A short description of this architecture (max. 500 chars)."
         },
         "citation": {
             "type": "string"
@@ -29,7 +35,8 @@
         "config": {
             "type": "object",
             "additionalProperties": true,
-            "minProperties": 1
+            "minProperties": 1,
+            "description": "The full adapter config dictionary for this architecture."
         }
     }
 }
