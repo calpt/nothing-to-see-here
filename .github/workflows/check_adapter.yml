@@ -1,9 +1,9 @@
-name: Checks
+name: Adapter Checks
 
 on:
   pull_request:
     branches: [ master ]
-    paths: [ 'adapters/**', 'architectures/**' ]
+    paths: [ 'adapters/**' ]
 
 jobs:
   # Check if the file format seems valid
@@ -28,9 +28,6 @@ jobs:
       - name: Adapter entry format checking
         run: |
           python scripts/check_format.py adapter ${{ steps.files.outputs.added_modified }}
-      - name: Architecture entry format checking
-        run: |
-          python scripts/check_format.py architecture ${{ steps.files.outputs.added_modified }}
       - name: File generation test
         run: |
           python scripts/generate.py

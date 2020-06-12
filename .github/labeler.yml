@@ -16,3 +16,4 @@ area/core:
 "**invalid**":
   - dist/**/*
   - adapters/*
+  - TEMPLATES/**/*

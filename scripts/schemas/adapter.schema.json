@@ -46,6 +46,14 @@
             "format": "uri",
             "description": "A URL providing more information on this adapter/ the authors/ the organization."
         },
+        "github": {
+            "type": "string",
+            "description": "A GitHub handle associated with the author(s)."
+        },
+        "twitter": {
+            "type": "string",
+            "description": "A Twitter handle associated with the author(s)."
+        },
         "citation": {
             "type": "string",
             "description": "A bibtex citation of the work related to this adapter."

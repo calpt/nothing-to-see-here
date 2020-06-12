@@ -1,11 +1,6 @@
 import json
 import os
-
-
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-SCHEMA_FOLDER = os.path.join(dir_path, "schemas")
-TEMPLATE_FOLDER="TEMPLATES"
+from config import SCHEMA_FOLDER, TEMPLATE_FOLDER
 
 
 def cmt(s):

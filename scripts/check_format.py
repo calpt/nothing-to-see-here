@@ -6,7 +6,7 @@ import sys
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 import yaml
-from generate import AVAILABLE_TYPES, REPO_FOLDER, ARCHITECTURE_FOLDER
+from config import *
 
 
 def _violation(s):
@@ -71,8 +71,12 @@ if __name__ == "__main__":
         files = [f for f in sys.argv[2:] if f.startswith(REPO_FOLDER)]
         check_func = check_adapter_format
     elif file_type == "architecture":
-        files = [f for f in sys.argv[1:] if f.startswith(ARCHITECTURE_FOLDER)]
+        files = [f for f in sys.argv[2:] if f.startswith(ARCHITECTURE_FOLDER)]
         check_func = check_architecture_format
+    elif file_type == "task":
+        files = [f for f in sys.argv[2:] if f.startswith(TASK_FOLDER)]
+    elif file_type == "subtask":
+        files = [f for f in sys.argv[2:] if f.startswith(SUBTASK_FOLDER)]
     else:
         sys.exit("Invalid file_type '{}'".format(file_type))
     # load schema

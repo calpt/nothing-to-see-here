@@ -6,12 +6,7 @@ from os.path import join, basename, dirname, relpath, splitext
 import sys
 import shutil
 import yaml
-
-
-AVAILABLE_TYPES = ['text_task', 'text_lang']
-REPO_FOLDER = "adapters"
-ARCHITECTURE_FOLDER = "architectures"
-INDEX_FOLDER = "index_{}"
+from config import *
 
 
 def generate_adapter_repo(files, dist_folder="dist", config_index=None):
@@ -70,7 +65,7 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
                 )
         id_dict["versions"][org_name] = relpath(gen_file, dist_folder)
         # TODO change default version to something more useful
-        id_dict["default"] = org_name
+        # id_dict["default"] = org_name
     # write index files to disc
     for a_type, adapters in index.items():
         for a_model_name, adapters in adapters.items():
