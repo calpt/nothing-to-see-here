@@ -32,6 +32,9 @@ files:
     version: ""
 #   - ...
 
+# A GitHub handle associated with the author(s).
+github: ""
+
 # The hidden size of the model
 hidden_size: "TODO: REQUIRED"
 
@@ -48,6 +51,9 @@ subtask: "TODO: REQUIRED"
 
 # The string identifier of the task this adapter belongs to.
 task: "TODO: REQUIRED"
+
+# A Twitter handle associated with the author(s).
+twitter: ""
 
 # The type of adapter (one of the options available in `adapter_type`.
 type: "TODO: REQUIRED"
