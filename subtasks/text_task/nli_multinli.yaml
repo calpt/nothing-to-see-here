@@ -16,3 +16,4 @@ citation: |
 metric:
   name: accuracy
   higher_is_better: true
+language: english
