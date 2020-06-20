@@ -4,7 +4,8 @@ task: nli
 subtask: multinli
 type: "text_task"
 dependencies:
-  - "dummies/bert-large-en-wiki"
+  - key: "dummies/bert-large-en-wiki"
+    description: "Language adapter"
 description: |
   Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
