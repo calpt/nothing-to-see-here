@@ -1,0 +1,11 @@
+{
+    "nli": {
+        "multinli": {
+            "aaaaaaaaaaaaaaaa": {
+                "versions": {
+                    "dummies": "adapters/dummies/bert-large-nli-mnli.json"
+                }
+            }
+        }
+    }
+}

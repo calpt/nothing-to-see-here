@@ -1,0 +1,11 @@
+{
+    "en": {
+        "wiki": {
+            "aaaaaaaaaaaaaaaaaaaaaaaa": {
+                "versions": {
+                    "dummies": "adapters/dummies/bert-base-en-wiki.json"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "config_id": "aaaaaaaaaaaaaaaa",
+  "default_version": "42",
+  "files": {
+    "1": {
+      "sha1": "ee39c07db6f4545a8c1ca4098cd3f15275a3f6cd",
+      "url": "http://example.org/1"
+    },
+    "111": {
+      "sha1": "ee39c07db6f4545a8c1ca4098cd3f15275a3f6cd",
+      "url": "http://example.org/111"
+    },
+    "42": {
+      "sha1": "ee39c07db6f4545a8c1ca4098cd3f15275a3f6cd",
+      "url": "http://example.org/42"
+    }
+  }
+}

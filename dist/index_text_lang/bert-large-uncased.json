@@ -1,0 +1,11 @@
+{
+    "en": {
+        "wiki": {
+            "aaaaaaaaaaaaaaaa": {
+                "versions": {
+                    "dummies": "adapters/dummies/bert-large-en-wiki.json"
+                }
+            }
+        }
+    }
+}

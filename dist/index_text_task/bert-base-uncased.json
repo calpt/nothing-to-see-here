@@ -2,13 +2,11 @@
     "sentiment": {
         "sst": {
             "111c481840064218": {
-                "default": "calpt",
                 "versions": {
                     "calpt": "adapters/calpt/bert-base-uncased_sst-2_pfeiffer.json"
                 }
             },
             "c315ba3bb3ccb683": {
-                "default": "example-org",
                 "versions": {
                     "example-org": "adapters/example-org/text_task-sst-bert-768-c315ba3bb3ccb683.json"
                 }
@@ -18,7 +16,6 @@
     "sts": {
         "mrpc": {
             "111c481840064218": {
-                "default": "calpt",
                 "versions": {
                     "calpt": "adapters/calpt/bert-base-uncased_mrpc_pfeiffer.json"
                 }
