@@ -17,6 +17,12 @@ config_id: "TODO: REQUIRED"
 # The version to be downloaded if no version is explicitly stated.
 default_version: "TODO: REQUIRED"
 
+# A list of adapters this adapter is dependent on.
+# Example: [ 'example-org/text_task-sst-bert' ]
+dependencies:
+  - ""
+#   - ...
+
 # A short description of this adapter.
 description: ""
 
