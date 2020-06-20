@@ -34,8 +34,10 @@ def generate_item(name, schema, lines, required=[], indent=0):
     else:
         if name in required:
             lines.append(" "*indent+f"{name}: \"TODO: REQUIRED\"")
-        else:
+        elif name:
             lines.append(" "*indent+f"{name}: \"\"")
+        else:
+            lines.append(" "*indent+"\"\"")
     if indent == 0:
         lines.append("")
 

@@ -46,7 +46,7 @@ def check_adapter_format(adapter_file, schema):
     return has_error
 
 
-def check_architecture_format(file, schema):
+def check_against_schema(file, schema):
     print("-"*5, f"Checking {file}", "-"*5)
     # 1. load to dict
     with open(file, 'r') as f:
@@ -72,11 +72,13 @@ if __name__ == "__main__":
         check_func = check_adapter_format
     elif file_type == "architecture":
         files = [f for f in sys.argv[2:] if f.startswith(ARCHITECTURE_FOLDER)]
-        check_func = check_architecture_format
+        check_func = check_against_schema
     elif file_type == "task":
         files = [f for f in sys.argv[2:] if f.startswith(TASK_FOLDER)]
+        check_func = check_against_schema
     elif file_type == "subtask":
         files = [f for f in sys.argv[2:] if f.startswith(SUBTASK_FOLDER)]
+        check_func = check_against_schema
     else:
         sys.exit("Invalid file_type '{}'".format(file_type))
     # load schema

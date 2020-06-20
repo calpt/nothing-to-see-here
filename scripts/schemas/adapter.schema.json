@@ -145,6 +145,17 @@
             "type": "string",
             "minLength": 1,
             "description": "The type of adapter (one of the options available in `adapter_type`."
+        },
+        "dependencies": {
+            "type": "array",
+            "description": "A list of adapters this adapter is dependent on.",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            },
+            "examples": [
+                "[ 'example-org/text_task-sst-bert' ]"
+            ]
         }
     }
 }
