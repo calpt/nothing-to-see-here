@@ -5,7 +5,7 @@ subtask: multinli
 type: "text_task"
 dependencies:
   - key: "dummies/bert-large-en-wiki"
-    description: "Language adapter"
+    description: "The language adapter trained together with this task adapter"
 description: |
   Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
