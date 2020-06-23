@@ -2,7 +2,7 @@ model_name: bert-base-uncased
 type: text_task
 task: sts
 subtask: mrpc
-config_id: 111c481840064218
+config_id: bb1c8efb82510bed
 config: pfeiffer
 description: |
   STS task adapter for bert-base-uncased in Pfeiffer architecture, trained on MRPC.

@@ -1,0 +1,25 @@
+config_id: "bb1c8efb82510bed"
+config: pfeiffer
+task: dummy
+subtask: dummy
+description: |
+  Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+  Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+author: "Adapter Dummies"
+email: "mail@example.org"
+url: "https://example.org"
+
+default_version: "1"
+files:
+- sha1: 05ed6239d6b1a6488c13d929bf4acb2464719f50
+  url: http://adapter-hub.webredirect.org/repo/files/dummy_bert-base_clf-head.zip
+  version: '1'
+
+hidden_size: 768
+model_class: BertModelWithHeads
+model_name: bert-base-uncased
+model_type: bert
+name: dummy
+type: text_task
