@@ -1,7 +1,16 @@
 {
+    "dummy": {
+        "dummy": {
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "dummies": "adapters/dummies/bert-base_clf-head.json"
+                }
+            }
+        }
+    },
     "sentiment": {
         "sst": {
-            "111c481840064218": {
+            "bb1c8efb82510bed": {
                 "versions": {
                     "calpt": "adapters/calpt/bert-base-uncased_sst-2_pfeiffer.json"
                 }
@@ -15,7 +24,7 @@
     },
     "sts": {
         "mrpc": {
-            "111c481840064218": {
+            "bb1c8efb82510bed": {
                 "versions": {
                     "calpt": "adapters/calpt/bert-base-uncased_mrpc_pfeiffer.json"
                 }
