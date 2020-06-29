@@ -1,0 +1,34 @@
+model_name: bert-base-multilingual-cased
+config_id: "bert-base-multilingual-cased_en_wiki_houlsby_gelu_2_nd"
+task: en
+subtask: wiki
+type: "text_lang"
+description: |
+  Adapter trained with the houlsby adapter architecture with a reduction factor of 2 and a gelu activation function.
+  The invertible adapter is also trained with a reduction factor of 2 and a gelu activation function.
+  The adapter was trained for 250k steps and a batch size of 64 on english wikipedia text.
+author: "Jonas Pfeiffer"
+email: "pfeiffer@ukp.informatik.tu-darmstadt"
+url: "https://pfeiffer.ai"
+
+citation: |
+  @article{pfeiffer20madx,
+    title={{MAD-X}: An {A}dapter-based {F}ramework for {M}ulti-task {C}ross-lingual {T}ransfer},
+    author={Pfeiffer, Jonas and Vuli\'{c}, Ivan and Gurevych, Iryna and Ruder, Sebastian},
+    journal={arXiv preprint},
+    year={2020},
+    url={https://arxiv.org/pdf/2005.00052.pdf},
+  }
+
+default_version: "nd"
+files:
+  - version: "nd"
+    sha1: "4b61a55ff30660414ab8377063bf1d7c3e70ad45"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/bert-base-multilingual-cased_en_wiki_houlsby_gelu_2_nd.zip"
+
+score: none
+
+config: houlsby_gelu_2
+hidden_size: 768
+model_type: bert
+name: en
