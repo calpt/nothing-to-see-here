@@ -2,20 +2,44 @@
 # Defines a single adapter entry in Adapter-Hub
 # --------------------
 
+# The type of adapter (one of the options available in `adapter_type`.
+type: "TODO: REQUIRED"
+
+# The string identifier of the task this adapter belongs to.
+task: "TODO: REQUIRED"
+
+# The string identifier of the subtask this adapter belongs to.
+subtask: "TODO: REQUIRED"
+
+# The model type.
+# Example: bert
+model_type: "TODO: REQUIRED"
+
+# The string identifier of the pre-trained model (by which it is identified at Huggingface).
+# Example: bert-base-uncased
+model_name: "TODO: REQUIRED"
+
 # The name of the author(s) of this adapter.
 author: "TODO: REQUIRED"
 
-# A bibtex citation of the work related to this adapter.
-citation: ""
-
-# The string identifier of the adapter architecture (must be available in architecture).
+# The name of the adapter config used by this adapter (must be available in `architectures` folder).
+# Example: pfeiffer
 config: "TODO: REQUIRED"
-
-# The calculated 16-digit config dictionary id.
-config_id: "TODO: REQUIRED"
 
 # The version to be downloaded if no version is explicitly stated.
 default_version: "TODO: REQUIRED"
+
+# A list of different versions of this adapter available for download.
+files: # TODO: REQUIRED
+  - sha1: ""
+    sha256: ""
+    # Download URL pointing to a zip folder containing the adapter module.
+    url: ""
+    version: ""
+#   - ...
+
+# A bibtex citation of the work related to this adapter.
+citation: ""
 
 # A list of adapters this adapter is dependent on.
 dependencies:
@@ -31,40 +55,18 @@ description: ""
 # A contact email of the author(s).
 email: ""
 
-# A list of different versions of this adapter available for download.
-files:
-  - sha1: ""
-    sha256: ""
-    # Download URL pointing to a zip folder containing the adapter module.
-    url: ""
-    version: ""
-#   - ...
-
 # A GitHub handle associated with the author(s).
 github: ""
 
-# The hidden size of the model
-hidden_size: "TODO: REQUIRED"
+# The name of the model class from which this adapter was extracted. This field is mainly intended for adapters with prediction heads.
+# Example: BertModelWithHeads
+model_class: ""
 
-# The string identifier of the pre-trained model (by which it is identified at Huggingface).
-# Example: bert-base-uncased
-model_name: "TODO: REQUIRED"
-
-# The model type.
-# Example: bert
-model_type: "TODO: REQUIRED"
-
-# The string identifier of the subtask this adapter belongs to.
-subtask: "TODO: REQUIRED"
-
-# The string identifier of the task this adapter belongs to.
-task: "TODO: REQUIRED"
+# The score this adapter achieves on the dataset.
+score: ""
 
 # A Twitter handle associated with the author(s).
 twitter: ""
-
-# The type of adapter (one of the options available in `adapter_type`.
-type: "TODO: REQUIRED"
 
 # A URL providing more information on this adapter/ the authors/ the organization.
 url: ""
