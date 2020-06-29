@@ -2,9 +2,6 @@
 # Defines an adapter architecture for Adapter-Hub.
 # --------------------
 
-# The calculated 16-digit config dictionary id.
-id: "TODO: REQUIRED"
-
 # The short identifier of this architecture
 # Example: pfeiffer
 name: "TODO: REQUIRED"
