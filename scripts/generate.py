@@ -9,7 +9,7 @@ import yaml
 from config import *
 
 
-def generate_adapter_repo(files, dist_folder="dist", config_index=None):
+def generate_adapter_repo(files, config_index, dist_folder="dist"):
     """Generates adapter repo and index files.
     """
     index = defaultdict(
@@ -21,17 +21,14 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
     for file in files:
         with open(file, 'r') as f:
             adapter_dict = yaml.load(f, yaml.FullLoader)
-        if config_index and isinstance(adapter_dict['config'], str):
-            if adapter_dict['config'] not in config_index:
-                raise ValueError(
-                        "Unknown adapter config identifier '{}'.".format(adapter_dict['config'])
-                    )
-            config = config_index[adapter_dict['config']]
-        else:
-            config = adapter_dict['config']
+        # generate config id
+        if adapter_dict['config'] not in config_index:
+            raise ValueError(
+                    "Unknown adapter config identifier '{}'.".format(adapter_dict['config'])
+                )
+        a_id = get_adapter_config_hash(config_index[adapter_dict['config']])
         path_split = file.split(os.sep)
         a_model_name = adapter_dict['model_name']
-        a_id = adapter_dict['config_id']
         a_type = adapter_dict['type']
         a_task = adapter_dict['task']
         a_name = adapter_dict['subtask']
@@ -41,6 +38,9 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
         ### Create generated json file
         gen_file = join(dist_folder, REPO_FOLDER, org_name, splitext(basename(file))[0]+".json")
         os.makedirs(dirname(gen_file), exist_ok=True)
+        # create dict entry with download files
+        if not adapter_dict['default_version'] in [file['version'] for file in adapter_dict['files']]:
+            raise ValueError("Specified default_version is not in files.")
         files = {}
         for file in adapter_dict['files']:
             version = file.pop('version')
@@ -48,8 +48,7 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
         gen_dict = {
             'config_id': a_id,
             'default_version': adapter_dict['default_version'],
-            'files': files,
-            # 'config': config
+            'files': files
         }
         with open(gen_file, 'w') as f:
             json.dump(gen_dict, f, indent=2, sort_keys=True)
@@ -82,12 +81,16 @@ def generate_adapter_repo(files, dist_folder="dist", config_index=None):
 
 def generate_architecture_index(files, dist_folder="dist"):
     index = {}
+    valid_specifiers = []
     for file in files:
         with open(file, 'r') as f:
             config = yaml.load(f, yaml.FullLoader)
         if config['name'] in index:
-            raise ValueError("Duplicate adapter architecture id '{}'".format(config['id']))
+            raise ValueError("Duplicate adapter architecture name '{}'".format(config['name']))
+        elif config['id'] in valid_specifiers:
+            raise ValueError("Duplicate adapter architecture with id '{}'".format(config['id']))
         index[config['name']] = config['config']
+        valid_specifiers.extend([config['id'], config['name']])
     with open(join(dist_folder, "{}.json".format(ARCHITECTURE_FOLDER)), 'x') as f:
         json.dump(index, f, indent=4, sort_keys=True)
     return index
@@ -106,4 +109,4 @@ if __name__ == "__main__":
     # generate adapter files
     repo_glob = join(REPO_FOLDER, "**", "*")
     files = glob(repo_glob)
-    generate_adapter_repo(files, dist_folder=dist_folder, config_index=config_index)
+    generate_adapter_repo(files, config_index, dist_folder=dist_folder)

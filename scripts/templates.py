@@ -16,7 +16,11 @@ def generate_item(name, schema, lines, required=[], indent=0):
         lines.append(" "*indent+cmt(f"Example: {schema['examples'][0]}"))
     if schema['type'] == 'object' and 'properties' in schema:
         if name:
-            lines.append(" "*indent+f"{name}:")
+            if name in required:
+                comment = " # TODO: REQUIRED"
+            else:
+                comment = ""
+            lines.append(" "*indent+f"{name}:"+comment)
         for name, data in sorted(schema['properties'].items()):
             generate_item(
                 name, data, lines,
@@ -25,14 +29,18 @@ def generate_item(name, schema, lines, required=[], indent=0):
             )
     elif schema['type'] == 'array':
         if name:
-            lines.append(" "*indent+f"{name}:")
+            if name in required:
+                comment = " # TODO: REQUIRED"
+            else:
+                comment = ""
+            lines.append(" "*indent+f"{name}:"+comment)
         first_i = len(lines)
         generate_item(None, schema['items'], lines, indent=indent+2)
         list_prefix = " "*(indent+2)+"- "
         lines[first_i] =list_prefix+lines[first_i].strip()
         lines.append(cmt(list_prefix+"..."))
     else:
-        if name in required:
+        if name in required and indent==0:
             lines.append(" "*indent+f"{name}: \"TODO: REQUIRED\"")
         elif name:
             lines.append(" "*indent+f"{name}: \"\"")
@@ -55,7 +63,8 @@ def generate_templates():
         lines.append(cmt(schema['description']))
         lines.append(cmt("-"*20))
         lines.append("")
-        for name, data in sorted(schema['properties'].items()):
+        keyfunc = lambda kv: "000"+str(schema['required'].index(kv[0])) if kv[0] in schema['required'] else kv[0]
+        for name, data in sorted(schema['properties'].items(), key=keyfunc):
             generate_item(name, data, lines, required=schema['required'])
         file_name = item.split(".")[0]
         out_file = os.path.join(TEMPLATE_FOLDER, f"{file_name}.template.yaml")

@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [ master ]
     paths: [ 'architectures/**', 'tasks/**', 'subtasks/**' ]
+  push:
+    branches: [ master ]
+    paths: [ 'architectures/**', 'tasks/**', 'subtasks/**' ]
 
 jobs:
   # Check if the file format seems valid

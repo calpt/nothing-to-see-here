@@ -2,7 +2,6 @@ model_name: bert-base-uncased
 type: text_task
 task: sts
 subtask: mrpc
-config_id: bb1c8efb82510bed
 config: pfeiffer
 description: |
   STS task adapter for bert-base-uncased in Pfeiffer architecture, trained on MRPC.
@@ -16,6 +15,4 @@ files:
     sha1: "5fcac888ecace4b078207ba6821298b7e8855193"
     url: "http://adapter-hub.webredirect.org/repo/files/text_task-mrpc-bert-768-111c481840064218.zip"
 
-hidden_size: 768
 model_type: bert
-name: mrpc

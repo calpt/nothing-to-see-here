@@ -1,5 +1,5 @@
 model_name: bert-base-uncased
-config_id: "aaaaaaaaaaaaaaaaaaaaaaaa"
+config: houlsby
 task: en
 subtask: wiki
 type: "text_lang"
@@ -33,7 +33,5 @@ files:
 
 score: 0.90
 
-config: houlsby
 hidden_size: 768
 model_type: bert
-name: en

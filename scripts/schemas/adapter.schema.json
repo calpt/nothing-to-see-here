@@ -5,17 +5,15 @@
     "title": "Adapter-Hub adapter entry",
     "description": "Defines a single adapter entry in Adapter-Hub",
     "required": [
-        "model_name",
-        "config_id",
-        "author",
-        "default_version",
-        "files",
+        "type",
         "task",
         "subtask",
-        "config",
-        "hidden_size",
         "model_type",
-        "type"
+        "model_name",
+        "author",
+        "config",
+        "default_version",
+        "files"
     ],
     "additionalProperties": false,
     "properties": {
@@ -25,11 +23,17 @@
             "description": "The string identifier of the pre-trained model (by which it is identified at Huggingface).",
             "examples": ["bert-base-uncased"]
         },
-        "config_id": {
+        "model_class": {
             "type": "string",
-            "minLength": 16,
-            "maxLength": 16,
-            "description": "The calculated 16-digit config dictionary id."
+            "minLength": 1,
+            "description": "The name of the model class from which this adapter was extracted. This field is mainly intended for adapters with prediction heads.",
+            "examples": ["BertModelWithHeads"]
+        },
+        "config": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The name of the adapter config used by this adapter (must be available in `architectures` folder).",
+            "examples": ["pfeiffer"]
         },
         "author": {
             "type": "string",
@@ -119,16 +123,12 @@
         },
         "score": {
             "type": "number",
-            "$comment": "$hidden"
-        },
-        "config": {
-            "type": "string",
-            "minLength": 1,
-            "description": "The string identifier of the adapter architecture (must be available in architecture)."
+            "description": "The score this adapter achieves on the dataset."
         },
         "hidden_size": {
             "type": "integer",
-            "description": "The hidden size of the model"
+            "description": "The hidden size of the model",
+            "$comment": "$hidden"
         },
         "model_type": {
             "type": "string",

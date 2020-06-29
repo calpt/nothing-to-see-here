@@ -5,14 +5,20 @@
     "title": "Adapter-Hub architecture entry",
     "description": "Defines an adapter architecture for Adapter-Hub.",
     "required": [
+        "id",
         "name",
         "displayname",
         "description",
-        "citation",
         "config"
     ],
     "additionalProperties": false,
     "properties": {
+        "id": {
+            "type": "string",
+            "minLength": 16,
+            "maxLength": 16,
+            "description": "The calculated 16-digit config dictionary id."
+        },
         "name": {
             "type": "string",
             "minLength": 1,
