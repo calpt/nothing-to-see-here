@@ -32,7 +32,7 @@ def get_adapter_config_hash(config, length=16):
     Returns:
         str: The resulting hash of the given config dict.
     """
-    minimized_config = _minimize_dict(config.items())
+    minimized_config = _minimize_dict(config)
     dict_str = json.dumps(minimized_config, sort_keys=True)
     h = hashlib.sha1()
     h.update(dict_str.encode(encoding="utf-8"))

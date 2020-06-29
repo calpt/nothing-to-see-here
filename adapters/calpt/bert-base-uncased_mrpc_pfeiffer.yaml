@@ -1,4 +1,5 @@
 model_name: bert-base-uncased
+model_type: bert
 type: text_task
 task: sts
 subtask: mrpc
@@ -15,4 +16,3 @@ files:
     sha1: "5fcac888ecace4b078207ba6821298b7e8855193"
     url: "http://adapter-hub.webredirect.org/repo/files/text_task-mrpc-bert-768-111c481840064218.zip"
 
-model_type: bert

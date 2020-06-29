@@ -1,4 +1,5 @@
 model_name: bert-base-uncased
+model_type: bert
 type: text_task
 task: sentiment
 subtask: sst
@@ -25,4 +26,3 @@ citation: |
     primaryClass={cs.CL}
   }
 
-model_type: bert
