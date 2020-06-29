@@ -1,5 +1,5 @@
 model_name: bert-large-uncased
-config_id: "aaaaaaaaaaaaaaaa"
+config_id: "aaaaaaaaaaasfaaaaaaa"
 task: en
 subtask: wiki
 type: "text_lang"
