@@ -31,23 +31,6 @@ def check_against_schema(file, schema):
     return False
 
 
-def check_architecture(file):
-    with open(file, 'r') as f:
-        try:
-            file_dict = yaml.load(f, Loader=yaml.FullLoader)
-        except yaml.YAMLError as e:
-            _violation("[{}]: {}".format(e.__class__.__name__, e))
-            return True
-    # check if hash is valid
-    try:
-        calculated_hash = get_adapter_config_hash(file_dict['config'])
-        assert calculated_hash == file_dict['id']
-    except:
-        _violation(f"Config ID '{file_dict['id']}' does not match specified config dict with ID '{calculated_hash}'.")
-        return True
-    return False
-
-
 if __name__ == "__main__":
     # get the type of files we want to check
     file_type = sys.argv[1]
@@ -56,7 +39,6 @@ if __name__ == "__main__":
         files = [f for f in sys.argv[2:] if f.startswith(REPO_FOLDER)]
     elif file_type == "architecture":
         files = [f for f in sys.argv[2:] if f.startswith(ARCHITECTURE_FOLDER)]
-        additional_check_func = check_architecture
     elif file_type == "task":
         files = [f for f in sys.argv[2:] if f.startswith(TASK_FOLDER)]
     elif file_type == "subtask":

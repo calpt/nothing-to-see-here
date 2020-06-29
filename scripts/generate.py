@@ -81,16 +81,17 @@ def generate_adapter_repo(files, config_index, dist_folder="dist"):
 
 def generate_architecture_index(files, dist_folder="dist"):
     index = {}
-    valid_specifiers = []
+    valid_ids = []
     for file in files:
         with open(file, 'r') as f:
             config = yaml.load(f, yaml.FullLoader)
         if config['name'] in index:
             raise ValueError("Duplicate adapter architecture name '{}'".format(config['name']))
-        elif config['id'] in valid_specifiers:
-            raise ValueError("Duplicate adapter architecture with id '{}'".format(config['id']))
+        config_id = get_adapter_config_hash(config['config'])
+        if config_id in valid_ids:
+            raise ValueError("Duplicate adapter architecture with id '{}'".format(config_id))
         index[config['name']] = config['config']
-        valid_specifiers.extend([config['id'], config['name']])
+        valid_ids.append(config_id)
     with open(join(dist_folder, "{}.json".format(ARCHITECTURE_FOLDER)), 'x') as f:
         json.dump(index, f, indent=4, sort_keys=True)
     return index
