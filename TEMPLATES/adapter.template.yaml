@@ -22,9 +22,17 @@ model_name: "TODO: REQUIRED"
 # The name of the author(s) of this adapter.
 author: "TODO: REQUIRED"
 
-# The name of the adapter config used by this adapter (must be available in `architectures` folder).
-# Example: pfeiffer
-config: "TODO: REQUIRED"
+# Describes the adapter architecture used by this adapter
+config: # TODO: REQUIRED
+  # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
+  # Example: pfeiffer
+  using: ""
+  # Overrides the default activation function of the specified adapter architecture.
+  # Example: tanh
+  non_linearity: ""
+  # Overrides the default reduction factor of the specified adapter architecture
+  # Example: 64
+  reduction_factor: ""
 
 # The version to be downloaded if no version is explicitly stated.
 default_version: "TODO: REQUIRED"

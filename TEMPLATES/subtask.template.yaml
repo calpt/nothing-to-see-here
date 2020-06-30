@@ -25,8 +25,8 @@ language: ""
 
 # The default evaluation metric of this subtask.
 metric:
-  higher_is_better: ""
   name: ""
+  higher_is_better: ""
 
 # A URL pointing to more information on this subtask.
 url: ""
