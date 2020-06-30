@@ -8,7 +8,6 @@
         "name",
         "displayname",
         "description",
-        "citation",
         "config"
     ],
     "additionalProperties": false,

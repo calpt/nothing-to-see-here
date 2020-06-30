@@ -16,10 +16,12 @@ def check_download(adapter_file):
     print("-"*5, f"Checking {adapter_file}", "-"*5)
     with open(adapter_file, 'r') as f:
         adapter_dict = yaml.load(f, yaml.FullLoader)
-    config = AutoConfig.for_model(
-        adapter_dict['model_type'],
-        hidden_size=adapter_dict['hidden_size']
-    )
+    config = AutoConfig.from_pretrained(adapter_dict['model_name'])
+    if not config.model_type == adapter_dict['model_type']:
+        _violation(
+            f"Specified model_type '{adapter_dict['model_type']}' does not match loaded model_type '{config.model_type}'."
+        )
+        return True
     model = AutoModel.from_config(config)
     for file in adapter_dict['files']:
         try:

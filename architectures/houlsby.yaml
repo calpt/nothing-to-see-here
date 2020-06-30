@@ -15,13 +15,11 @@ citation: |
 
 config:
   {
-    "LN_after": false,
-    "LN_before": false,
-    "MH_Adapter": true,
-    "Output_Adapter": true,
+    "ln_after": false,
+    "ln_before": false,
+    "mh_adapter": true,
+    "output_adapter": true,
     "adapter_residual_before_ln": false,
-    "attention_type": "sent-lvl-dynamic",
-    "new_attention_norm": false,
     "non_linearity": "swish",
     "original_ln_after": true,
     "original_ln_before": false,
