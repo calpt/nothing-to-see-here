@@ -7,6 +7,11 @@ def cmt(s):
     return f"# {s}"
 
 
+def _keyfunc(required):
+    print(required)
+    return lambda kv: "000"+str(required.index(kv[0])) if kv[0] in required else kv[0]
+
+
 def generate_item(name, schema, lines, required=[], indent=0):
     if '$comment' in schema and schema['$comment'] == '$hidden':
         return
@@ -21,7 +26,7 @@ def generate_item(name, schema, lines, required=[], indent=0):
             else:
                 comment = ""
             lines.append(" "*indent+f"{name}:"+comment)
-        for name, data in sorted(schema['properties'].items()):
+        for name, data in sorted(schema['properties'].items(), key=_keyfunc(schema.get('required', []))):
             generate_item(
                 name, data, lines,
                 required=schema.get('required', []),
@@ -63,8 +68,7 @@ def generate_templates():
         lines.append(cmt(schema['description']))
         lines.append(cmt("-"*20))
         lines.append("")
-        keyfunc = lambda kv: "000"+str(schema['required'].index(kv[0])) if kv[0] in schema['required'] else kv[0]
-        for name, data in sorted(schema['properties'].items(), key=keyfunc):
+        for name, data in sorted(schema['properties'].items(), key=_keyfunc(schema['required'])):
             generate_item(name, data, lines, required=schema['required'])
         file_name = item.split(".")[0]
         out_file = os.path.join(TEMPLATE_FOLDER, f"{file_name}.template.yaml")
