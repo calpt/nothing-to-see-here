@@ -6,6 +6,13 @@
                     "dummies": "adapters/dummies/bert-base_clf-head.json"
                 }
             }
+        },
+        "dummy2": {
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "dummies": "adapters/dummies/bert-base_bertforseqclass.json"
+                }
+            }
         }
     },
     "sentiment": {

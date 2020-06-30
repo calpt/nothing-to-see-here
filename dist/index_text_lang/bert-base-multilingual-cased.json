@@ -1,0 +1,11 @@
+{
+    "en": {
+        "wiki": {
+            "fea062128096e920": {
+                "versions": {
+                    "pfeiffer": "adapters/pfeiffer/bert-base-multilingual-cased-en-wiki.json"
+                }
+            }
+        }
+    }
+}
