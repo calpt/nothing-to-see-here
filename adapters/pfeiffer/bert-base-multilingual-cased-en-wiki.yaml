@@ -18,9 +18,6 @@ citation: |
 # The string identifier of the adapter architecture (must be available in architecture).
 config: houlsby_gelu_2
 
-# The calculated 16-digit config dictionary id.
-config_id: "bert-base-multilingual-cased_en_wiki_houlsby_gelu_2_nd"
-
 # The version to be downloaded if no version is explicitly stated.
 default_version: "nd"
 
