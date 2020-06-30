@@ -1,5 +1,6 @@
 model_name: bert-large-uncased
-config: houlsby
+config:
+  using: houlsby
 task: nli
 subtask: multinli
 type: "text_task"

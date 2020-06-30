@@ -1,6 +1,6 @@
 import json
 import os
-from config import SCHEMA_FOLDER, TEMPLATE_FOLDER
+from utils import SCHEMA_FOLDER, TEMPLATE_FOLDER
 
 
 def cmt(s):

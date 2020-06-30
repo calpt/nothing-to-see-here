@@ -3,7 +3,8 @@ type: text_task
 task: sentiment
 subtask: sst
 config_id: c315ba3bb3ccb683
-config: pfeiffer
+config:
+  using: pfeiffer
 description: |
   MNLI task adapter in Pfeiffer architecture for BERT base.
 author: "Example Org."

@@ -6,7 +6,7 @@ from os.path import join, basename, dirname, relpath, splitext
 import sys
 import shutil
 import yaml
-from config import *
+from utils import *
 
 
 def generate_adapter_repo(files, config_index, dist_folder="dist"):
@@ -22,11 +22,11 @@ def generate_adapter_repo(files, config_index, dist_folder="dist"):
         with open(file, 'r') as f:
             adapter_dict = yaml.load(f, yaml.FullLoader)
         # generate config id
-        if adapter_dict['config'] not in config_index:
+        if adapter_dict['config']['using'] not in config_index:
             raise ValueError(
                     "Unknown adapter config identifier '{}'.".format(adapter_dict['config'])
                 )
-        a_id = get_adapter_config_hash(config_index[adapter_dict['config']])
+        a_id = get_adapter_config_hash(build_config_from_yaml(adapter_dict['config']))
         path_split = file.split(os.sep)
         a_model_name = adapter_dict['model_name']
         a_type = adapter_dict['type']

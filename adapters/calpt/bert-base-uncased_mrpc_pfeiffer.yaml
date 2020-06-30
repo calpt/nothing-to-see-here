@@ -3,7 +3,8 @@ model_type: bert
 type: text_task
 task: sts
 subtask: mrpc
-config: pfeiffer
+config:
+  using: pfeiffer
 description: |
   STS task adapter for bert-base-uncased in Pfeiffer architecture, trained on MRPC.
 author: calpt

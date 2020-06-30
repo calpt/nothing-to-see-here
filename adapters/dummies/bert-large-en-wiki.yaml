@@ -1,5 +1,6 @@
 model_name: bert-large-uncased
-config: houlsby
+config:
+  using: houlsby
 task: en
 subtask: wiki
 type: "text_lang"

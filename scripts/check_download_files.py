@@ -3,7 +3,7 @@ import logging
 import sys
 import yaml
 from transformers import AutoConfig, AutoModel
-from config import REPO_FOLDER, ARCHITECTURE_FOLDER
+from utils import REPO_FOLDER, ARCHITECTURE_FOLDER, build_config_from_yaml
 from os.path import join
 
 
@@ -18,9 +18,7 @@ def check_download(adapter_file):
     with open(adapter_file, 'r') as f:
         adapter_dict = yaml.load(f, yaml.FullLoader)
     # load adapter_config from yaml file
-    adapter_config_file = join(ARCHITECTURE_FOLDER, adapter_dict['config']+".yaml")
-    with open(adapter_config_file, 'r') as f:
-        adapter_config = yaml.load(f, yaml.FullLoader)['config']
+    adapter_config = build_config_from_yaml(adapter_dict['config'])
     config = AutoConfig.from_pretrained(adapter_dict['model_name'])
     if not config.model_type == adapter_dict['model_type']:
         _violation(

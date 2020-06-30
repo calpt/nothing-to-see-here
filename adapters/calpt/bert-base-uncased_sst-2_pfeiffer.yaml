@@ -3,7 +3,8 @@ model_type: bert
 type: text_task
 task: sentiment
 subtask: sst
-config: pfeiffer
+config:
+  using: pfeiffer
 description: |
   Sentiment task adapter for bert-base-uncased in Pfeiffer architecture, trained on SST-2.
 author: calpt

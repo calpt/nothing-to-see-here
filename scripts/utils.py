@@ -2,6 +2,8 @@ import hashlib
 import json
 import os
 from typing import Mapping
+import yaml
+
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -37,3 +39,13 @@ def get_adapter_config_hash(config, length=16):
     h = hashlib.sha1()
     h.update(dict_str.encode(encoding="utf-8"))
     return h.hexdigest()[:length]
+
+
+def build_config_from_yaml(config_yaml):
+    adapter_config_file = os.path.join(ARCHITECTURE_FOLDER, config_yaml['using']+".yaml")
+    with open(adapter_config_file, 'r') as f:
+        adapter_config = yaml.load(f, yaml.FullLoader)['config']
+    for k,v in config_yaml.items():
+        if k != 'using':
+            adapter_config[k] = v
+    return adapter_config

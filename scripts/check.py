@@ -6,7 +6,7 @@ from os.path import join, dirname, realpath
 import sys
 from check_format import check_against_schema
 from check_download_files import check_download
-from config import REPO_FOLDER
+from utils import REPO_FOLDER
 
 
 dir_path = dirname(realpath(__file__))

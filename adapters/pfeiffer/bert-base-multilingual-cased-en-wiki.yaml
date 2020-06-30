@@ -16,7 +16,8 @@ citation: |
   }
 
 # The string identifier of the adapter architecture (must be available in architecture).
-config: houlsby_gelu_2
+config:
+  using: houlsby_gelu_2
 
 # The version to be downloaded if no version is explicitly stated.
 default_version: "nd"

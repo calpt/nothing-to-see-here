@@ -1,6 +1,9 @@
-config: pfeiffer
 task: dummy
 subtask: dummy2
+config:
+  using: pfeiffer
+  reduction_factor: 16
+  non_linearity: relu
 description: |
   Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.

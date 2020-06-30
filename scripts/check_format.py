@@ -6,7 +6,7 @@ import sys
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 import yaml
-from config import *
+from utils import *
 
 
 def _violation(s):

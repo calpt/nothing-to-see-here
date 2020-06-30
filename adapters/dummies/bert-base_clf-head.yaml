@@ -1,4 +1,5 @@
-config: pfeiffer
+config:
+  using: pfeiffer
 task: dummy
 subtask: dummy
 description: |
