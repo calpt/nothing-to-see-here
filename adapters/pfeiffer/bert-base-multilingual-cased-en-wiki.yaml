@@ -1,16 +1,11 @@
-model_name: bert-base-multilingual-cased
-config_id: "bert-base-multilingual-cased_en_wiki_houlsby_gelu_2_nd"
-task: en
-subtask: wiki
-type: "text_lang"
-description: |
-  Adapter trained with the houlsby adapter architecture with a reduction factor of 2 and a gelu activation function.
-  The invertible adapter is also trained with a reduction factor of 2 and a gelu activation function.
-  The adapter was trained for 250k steps and a batch size of 64 on english wikipedia text.
-author: "Jonas Pfeiffer"
-email: "pfeiffer@ukp.informatik.tu-darmstadt"
-url: "https://pfeiffer.ai"
+# Adapter-Hub adapter entry
+# Defines a single adapter entry in Adapter-Hub
+# --------------------
 
+# The name of the author(s) of this adapter.
+author: "Jonas Pfeiffer"
+
+# A bibtex citation of the work related to this adapter.
 citation: |
   @article{pfeiffer20madx,
     title={{MAD-X}: An {A}dapter-based {F}ramework for {M}ulti-task {C}ross-lingual {T}ransfer},
@@ -20,15 +15,66 @@ citation: |
     url={https://arxiv.org/pdf/2005.00052.pdf},
   }
 
-default_version: "nd"
-files:
-  - version: "nd"
-    sha1: "4b61a55ff30660414ab8377063bf1d7c3e70ad45"
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/bert-base-multilingual-cased_en_wiki_houlsby_gelu_2_nd.zip"
-
-score: none
-
+# The string identifier of the adapter architecture (must be available in architecture).
 config: houlsby_gelu_2
+
+# The calculated 16-digit config dictionary id.
+config_id: "bert-base-multilingual-cased_en_wiki_houlsby_gelu_2_nd"
+
+# The version to be downloaded if no version is explicitly stated.
+default_version: "nd"
+
+# A list of adapters this adapter is dependent on.
+dependencies:
+  - description: ""
+    # The key (username/filename_without_ext) of the adapter dependency.
+    # Example: example-org/text_task-sst-bert
+    key: ""
+#   - ...
+
+# A short description of this adapter.
+description: |
+  Adapter trained with the houlsby adapter architecture with a reduction factor of 2 and a gelu activation function.
+  The invertible adapter is also trained with a reduction factor of 2 and a gelu activation function.
+  The adapter was trained for 250k steps and a batch size of 64 on english wikipedia text.
+
+# A contact email of the author(s).
+email: "pfeiffer@ukp.informatik.tu-darmstadt"
+
+# A list of different versions of this adapter available for download.
+files:
+  - sha1: "4b61a55ff30660414ab8377063bf1d7c3e70ad45"
+    sha256: "fe6d7f022db066518b3a574158269a836aa4688bdef0842591ba1f6803d6f934"
+    # Download URL pointing to a zip folder containing the adapter module.
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/bert-base-multilingual-cased_en_wiki_houlsby_gelu_2_nd.zip"
+    version: "nd"
+#   - ...
+
+# A GitHub handle associated with the author(s).
+github: "jopfeiff"
+
+# The hidden size of the model
 hidden_size: 768
+
+# The string identifier of the pre-trained model (by which it is identified at Huggingface).
+# Example: bert-base-uncased
+model_name: "bert-base-multilingual-cased"
+
+# The model type.
+# Example: bert
 model_type: bert
-name: en
+
+# The string identifier of the subtask this adapter belongs to.
+subtask: wiki
+
+# The string identifier of the task this adapter belongs to.
+task: en
+
+# A Twitter handle associated with the author(s).
+twitter: "@PfeiffJo"
+
+# The type of adapter (one of the options available in `adapter_type`.
+type: "text_lang"
+
+# A URL providing more information on this adapter/ the authors/ the organization.
+url: "https://pfeiffer.ai"
