@@ -3,7 +3,8 @@ import logging
 import sys
 import yaml
 from transformers import AutoConfig, AutoModel
-from generate import REPO_FOLDER
+from config import REPO_FOLDER, ARCHITECTURE_FOLDER
+from os.path import join
 
 
 def _violation(s):
@@ -13,14 +14,19 @@ def _violation(s):
 def check_download(adapter_file):
     """Checks if the download links of the given adapter description file are valid.
     """
-    print("-"*5, f"Checking {adapter_file}", "-"*5)
+    print("-"*5, f"Checking download of {adapter_file}", "-"*5)
     with open(adapter_file, 'r') as f:
         adapter_dict = yaml.load(f, yaml.FullLoader)
+    # load adapter_config from yaml file
+    adapter_config_file = join(ARCHITECTURE_FOLDER, adapter_dict['config']+".yaml")
+    with open(adapter_config_file, 'r') as f:
+        adapter_config = yaml.load(f, yaml.FullLoader)['config']
     config = AutoConfig.from_pretrained(adapter_dict['model_name'])
     if not config.model_type == adapter_dict['model_type']:
         _violation(
             f"Specified model_type '{adapter_dict['model_type']}' does not match loaded model_type '{config.model_type}'."
         )
+        print(f"FAILED: {adapter_file}!\n")
         return True
     model = AutoModel.from_config(config)
     for file in adapter_dict['files']:
@@ -29,13 +35,15 @@ def check_download(adapter_file):
             model.load_adapter(
                 file['url'],
                 adapter_dict['type'],
-                config=adapter_dict['config'],
+                config=adapter_config,
                 load_as=file['version'],
                 checksum=file['sha1']
             )
         except Exception as e:
             _violation("[{}]: {}".format(e.__class__.__name__, e))
+            print(f"FAILED: {adapter_file}!\n")
             return True
+    print(f"PASSED: {adapter_file}.\n")
     return False
 
 
@@ -46,7 +54,4 @@ if __name__ == "__main__":
     for file in files:
         has_error = check_download(file)
         if has_error:
-            sys.exit(f"FAILED: {file}!")
-        else:
-            print(f"PASSED: {file}.")
-            print("")
+            sys.exit(1)
