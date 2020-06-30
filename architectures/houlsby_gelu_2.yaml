@@ -1,7 +1,7 @@
-name: houlsby
+name: houlsby_gelu_2
 displayname: Houlsby Architecture
 description: |
-  Task adapter architecture by Houlsby et al.
+  Task adapter architecture by Houlsby et al. with a reduction factor of 2 and a gelu activation function
 
 citation: |
   @misc{houlsby2019parameterefficient,
