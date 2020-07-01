@@ -20,10 +20,10 @@ citation: |
 config: # TODO: REQUIRED
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
   # Example: pfeiffer
-  using: "pfeiffer"
+  using: pfeiffer
   # Overrides the default activation function of the specified adapter architecture.
   # Example: tanh
-  non_linearity: "gelu"
+  non_linearity: gelu
   # Overrides the default reduction factor of the specified adapter architecture
   # Example: 64
   reduction_factor: 2
