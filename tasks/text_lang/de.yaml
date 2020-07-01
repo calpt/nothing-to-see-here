@@ -1,3 +1,6 @@
 task: de
 displayname: German
-description: ""
+description: |
+  German is a West Germanic language that is mainly spoken in Central Europe.
+  Script: Latin
+  Language Family: Indo-European -> Germanic -> West Germanic -> High German -> German

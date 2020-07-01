@@ -33,9 +33,7 @@ default_version: "nd"
 
 # A short description of this adapter.
 description: |
-  Adapter trained with the houlsby adapter architecture with a reduction factor of 2 and a gelu activation function.
-  The invertible adapter is also trained with a reduction factor of 2 and a gelu activation function.
-  The adapter was trained for 250k steps and a batch size of 64 on english wikipedia text.
+  Pfeiffer Adapter trained with Masked Language Modelling on Min Dong Wikipedia Articles for 50k steps and a batch size of 64.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
