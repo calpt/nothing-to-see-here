@@ -20,7 +20,7 @@ citation: |
 config: # TODO: REQUIRED
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
   # Example: pfeiffer
-  using: housby
+  using: houlsby
   # Overrides the default activation function of the specified adapter architecture.
   # Example: tanh
   non_linearity: gelu
