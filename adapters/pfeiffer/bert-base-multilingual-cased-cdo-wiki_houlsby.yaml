@@ -42,13 +42,13 @@ email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "0d5a99ab276579464a896b0b23e7914d2bf5c317"
-    sha256: "b3e08f4bca11edb5252408c777e37c36738b63e45a3379fd00cef8adb3c016f6"
+  - sha1: "5e95ad33217a428e6b4a3ed4714ec38873304d51"
+    sha256: "51869a9f391fc2d421e0e591ae1cb94e20cab44a5f4af7c5baf3e1ed6a95b690"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/cdo/bert-base-multilingual-cased/houlsby/cdo_houlsby_gelu_nd.zip"
     version: "nd"
-  - sha1: "6c2da02c6e96cdc03e0e16623d63a5a61b8f682c"
-    sha256: "7ae6a93d0cddcb3caa9230466aa9c3a20ae0939d3fe5d287f08b7d8dca0fd415"
+  - sha1: "5e8b3f28e6cd02e810c46458344e5a5067c526b0"
+    sha256: "e2531e783a36212fdb0da06a4376e96a5919372cb0b18a9f47fa9bf350c66879"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/cdo/bert-base-multilingual-cased/houlsby/cdo_houlsby_gelu.zip"
     version: "wd"
