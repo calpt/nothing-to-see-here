@@ -1,9 +1,23 @@
 {
+    "cdo": {
+        "wiki": {
+            "2544b31b29c6067d": {
+                "versions": {
+                    "pfeiffer": "adapters/pfeiffer/bert-base-multilingual-cased-cdo-wiki_pfeiffer.json"
+                }
+            },
+            "f10efa747ae87c60": {
+                "versions": {
+                    "pfeiffer": "adapters/pfeiffer/bert-base-multilingual-cased-cdo-wiki_houlsby.json"
+                }
+            }
+        }
+    },
     "en": {
         "wiki": {
-            "fea062128096e920": {
+            "f10efa747ae87c60": {
                 "versions": {
-                    "pfeiffer": "adapters/pfeiffer/bert-base-multilingual-cased-en-wiki.json"
+                    "pfeiffer": "adapters/pfeiffer/bert-base-multilingual-cased-en-wiki_houlsby.json"
                 }
             }
         }
