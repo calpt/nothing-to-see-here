@@ -47,8 +47,8 @@ files:
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/cdo/bert-base-multilingual-cased/houlsby/cdo_houlsby_gelu_nd.zip"
     version: "nd"
-  - sha1: "5e8b3f28e6cd02e810c46458344e5a5067c526b0"
-    sha256: "e2531e783a36212fdb0da06a4376e96a5919372cb0b18a9f47fa9bf350c66879"
+  - sha1: "1fe9b90cc248529ab343cb92bd9b8c9d33f69fdf"
+    sha256: "bfc3bba27d5fb5bdda1ee7c75873b143f86a143356359f974fb903258f15d8b7"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/cdo/bert-base-multilingual-cased/houlsby/cdo_houlsby_gelu.zip"
     version: "wd"
