@@ -15,9 +15,17 @@ citation: |
     url={https://arxiv.org/pdf/2005.00052.pdf},
   }
 
-# The string identifier of the adapter architecture (must be available in architecture).
-config:
-  using: houlsby_gelu_2
+# Describes the adapter architecture used by this adapter
+config: # TODO: REQUIRED
+  # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
+  # Example: pfeiffer
+  using: "houlsby"
+  # Overrides the default activation function of the specified adapter architecture.
+  # Example: tanh
+  non_linearity: "gelu"
+  # Overrides the default reduction factor of the specified adapter architecture
+  # Example: 64
+  reduction_factor: 2
 
 # The version to be downloaded if no version is explicitly stated.
 default_version: "nd"
