@@ -16,6 +16,7 @@ files:
 - sha1: 05ed6239d6b1a6488c13d929bf4acb2464719f50
   url: http://adapter-hub.webredirect.org/repo/files/dummy_bert-base_clf-head.zip
   version: '1'
+  description: "A description for this version"
 
 model_class: BertModelWithHeads
 model_name: bert-base-uncased

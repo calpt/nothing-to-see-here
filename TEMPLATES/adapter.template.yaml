@@ -39,7 +39,9 @@ default_version: "TODO: REQUIRED"
 
 # A list of different versions of this adapter available for download.
 files: # TODO: REQUIRED
-  - sha1: ""
+  - # A short description of this adapter version.
+    description: ""
+    sha1: ""
     sha256: ""
     # Download URL pointing to a zip folder containing the adapter module.
     url: ""

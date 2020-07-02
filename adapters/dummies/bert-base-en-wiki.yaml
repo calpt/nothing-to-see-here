@@ -25,12 +25,15 @@ files:
   - version: "1"
     sha1: "ee39c07db6f4545a8c1ca4098cd3f15275a3f6cd"
     url: "http://example.org/1"
+    description: "A comment"
   - version: "42"
     sha1: "ee39c07db6f4545a8c1ca4098cd3f15275a3f6cd"
     url: "http://example.org/42"
+    description: "Another comment"
   - version: "111"
     sha1: "ee39c07db6f4545a8c1ca4098cd3f15275a3f6cd"
     url: "http://example.org/111"
+    description: "A looooooooooooooooooooooooooong comment"
 
 score: 0.90
 
