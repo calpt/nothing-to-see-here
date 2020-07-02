@@ -44,6 +44,7 @@ def generate_adapter_repo(files, config_index, dist_folder="dist"):
         files = {}
         for file in adapter_dict['files']:
             version = file.pop('version')
+            file.pop('description', None)
             files[version] = file
         gen_dict = {
             'config_id': a_id,
