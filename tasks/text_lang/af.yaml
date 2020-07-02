@@ -1,6 +1,6 @@
-task: de
-displayname: German
+task: af
+displayname: Afrikaans
 description: |
   Script: Latin
   Language Family: Indo-European
-  iso: de
+  iso: af

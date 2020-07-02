@@ -1,6 +1,6 @@
-task: de
-displayname: German
+task: is
+displayname: Icelandic
 description: |
   Script: Latin
   Language Family: Indo-European
-  iso: de
+  iso: is
