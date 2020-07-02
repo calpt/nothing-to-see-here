@@ -3,8 +3,6 @@ subtask: wiki
 description: |
   Language modeling for the Min Dong language on Wikipedia.
   Eastern Min or Min Dong, is a branch of the Min group of Sinitic languages of China.
-  Script: Chinese characters
-  Language Family: Sino-Tibetan -> Sinitic -> Min -> Coastal Min -> Eastern Min
 url: ""
 citation: ""
 metric: ""

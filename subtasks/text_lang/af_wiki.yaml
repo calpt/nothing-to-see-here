@@ -1,0 +1,8 @@
+task: af
+subtask: wiki
+description: |
+  Language modeling for the Afrikaan language on Wikipedia.
+  Afrikaans is a West Germanic language spoken in South Africa, Namibia and, to a lesser extent, Botswana and Zimbabwe.
+url: ""
+citation: ""
+metric: ""

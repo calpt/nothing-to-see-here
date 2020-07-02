@@ -1,6 +1,6 @@
-task: de
-displayname: German
+task: as
+displayname: Assamese
 description: |
   Script: Latin
   Language Family: Indo-European
-  iso: de
+  iso: as

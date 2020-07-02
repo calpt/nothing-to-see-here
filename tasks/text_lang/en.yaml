@@ -1,7 +1,6 @@
 task: en
 displayname: English
 description: |
-  English is a West Germanic language that was first spoken in early medieval England and eventually became a
-  global lingua franca.
   Script: Latin
-  Language Family: Indo-European -> Germanic -> West Germanic -> Ingvaeonic -> Anglo-Frisian -> Anglic -> English
+  Language Family: Indo-European
+  iso: en
