@@ -139,6 +139,10 @@
                     },
                     "sha256": {
                         "type": "string"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "A short description of this adapter version."
                     }
                 }
             }
