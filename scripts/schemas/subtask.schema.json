@@ -51,14 +51,7 @@
             "description": "The identifier of the language of the data in this subtask"
         },
         "metric": {
-            "oneOf": [
-                {
-                    "type": "object"
-                },
-                {
-                    "type": "null"
-                }
-            ],
+            "type": "object",
             "required": [
                 "name",
                 "higher_is_better"

@@ -8,7 +8,6 @@ def cmt(s):
 
 
 def _keyfunc(required):
-    print(required)
     return lambda kv: "000"+str(required.index(kv[0])) if kv[0] in required else kv[0]
 
 
