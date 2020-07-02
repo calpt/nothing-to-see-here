@@ -7,7 +7,6 @@
     "required": [
         "task",
         "subtask",
-        "displayname",
         "description"
     ],
     "additionalProperties": false,
@@ -52,7 +51,14 @@
             "description": "The identifier of the language of the data in this subtask"
         },
         "metric": {
-            "type": "object",
+            "oneOf": [
+                {
+                    "type": "object"
+                },
+                {
+                    "type": "null"
+                }
+            ],
             "required": [
                 "name",
                 "higher_is_better"
