@@ -91,5 +91,19 @@
                 }
             }
         }
+    },
+    "ja": {
+        "wiki": {
+            "2544b31b29c6067d": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-multilingual-cased-ja-wiki_pfeiffer.json"
+                }
+            },
+            "f10efa747ae87c60": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-multilingual-cased-ja-wiki_houlsby.json"
+                }
+            }
+        }
     }
 }
