@@ -40,8 +40,8 @@ email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "fc82c13b6a54c12aec282a69a8e0fa4bf325e2dc"
-    sha256: "49bb92c40ecaa5af520fd0b38bd2d6df2d7df7e7bf460a295331f0f0126efc7a"
+  - sha1: "c153db03a07d072a2e30f5f54d6ff5a42e6bd3a3"
+    sha256: "596eec6645b243941699f36ea134739951b9e357fb76bc457ec0538c542b67e2"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/gn/bert-base-multilingual-cased/pfeiffer/gn_pfeiffer_gelu_nd.zip"
     version: "nd"
