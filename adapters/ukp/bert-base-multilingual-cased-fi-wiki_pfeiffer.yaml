@@ -33,7 +33,7 @@ default_version: "nd"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained with Masked Language Modelling on Finnish Wikipedia Articles for 50k steps and a batch size of 64.
+  Pfeiffer Adapter trained with Masked Language Modelling on Finnish Wikipedia Articles for 250k steps and a batch size of 64.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
