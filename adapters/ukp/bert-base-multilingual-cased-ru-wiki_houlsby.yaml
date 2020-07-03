@@ -20,7 +20,7 @@ citation: |
 config: # TODO: REQUIRED
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
   # Example: pfeiffer
-  using: pfeiffer
+  using: houlsby
   # Overrides the default activation function of the specified adapter architecture.
   # Example: tanh
   non_linearity: gelu
@@ -33,22 +33,22 @@ default_version: "nd"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained with Masked Language Modelling on Quechuan Wikipedia Articles for 50k steps and a batch size of 64.
+  Houlsby Adapter trained with Masked Language Modelling on Russian Wikipedia Articles for 250k steps and a batch size of 64.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "77533861a58987dc6b1639242dd6a08a89e755a4"
-    sha256: "c78b7c901d66a2735d88399f640f9cdd38ce085acd0efe4082ede98e4db7e708"
+  - sha1: "e04675ac5d9df3ef3bfe7d199dc766183b162589"
+    sha256: "30dd72f0f0a177fffdb72ce295d8d6593e4c0ee2982b0a980feb2df22f6f0264"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/qu/bert-base-multilingual-cased/pfeiffer/qu_pfeiffer_gelu_nd.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/ru/bert-base-multilingual-cased/houlsby_/ru_houlsby_gelu_nd.zip"
     version: "nd"
-  - sha1: "a0f2e91658e83095af874a78b31ce35421c61b76"
-    sha256: "1a290e2058dc8b4f3e3ee95a208d0e815b82f83f6f4bbd0c883e01866ecd5439"
+  - sha1: "776099c0a4d6f75e196cbc11994cb872652f6488"
+    sha256: "3299bd9ebd6e04e2dd2986a5aed46604b7fe2a196bdff498268305db6de66811"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/qu/bert-base-multilingual-cased/pfeiffer/qu_pfeiffer_gelu.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/ru/bert-base-multilingual-cased/houlsby_/ru_houlsby_gelu.zip"
     version: "wd"
 #   - ...
 
@@ -70,7 +70,7 @@ model_type: bert
 subtask: wiki
 
 # The string identifier of the task this adapter belongs to.
-task: qu
+task: ru
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"
