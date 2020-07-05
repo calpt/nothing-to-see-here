@@ -14,14 +14,14 @@
         "task": {
             "type": "string",
             "minLength": 1,
-            "maxLength": 10,
+            "maxLength": 30,
             "description": "The short identifier of the task this subtask belongs to.",
             "examples": ["nli"]
         },
         "subtask": {
             "type": "string",
             "minLength": 1,
-            "maxLength": 10,
+            "maxLength": 30,
             "description": "The short identifier of this subtask.",
             "examples": ["multinli"]
         },

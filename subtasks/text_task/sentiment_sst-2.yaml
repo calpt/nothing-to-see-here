@@ -4,32 +4,29 @@
 
 # The short identifier of the task this subtask belongs to.
 # Example: nli
-task: nli
+task: sentiment
 
 # The short identifier of this subtask.
 # Example: multinli
-subtask: multinli
+subtask: sst-2
 
 # A short description of this subtask (max. 500 chars).
 description: |
-  Multi-Genre Natural Language Inference is a large-scale, crowdsourced entailment classification task (Williams et al., 2018).
-  Given a pair of sentences, the goal is to predict whether the second  sentence  is  an entailment,
-  contradiction,  or neutral with respect to the first one.
+  The Stanford Sentiment Treebank is abinary single-sentence classification task consist-ing of sentences extracted
+  from  movie  reviews with human annotations of their sentiment. 
 
 # A bibtex citation of the work related to this subtask.
 citation: |
-  @misc{williams2017broadcoverage,
-    title={A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference},
-    author={Adina Williams and Nikita Nangia and Samuel R. Bowman},
-    year={2017},
-    eprint={1704.05426},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL}
+  @inproceedings{Socher2013RecursiveDM,
+  title={Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank},
+  author={Richard Socher and Alex Perelygin and Jean Wu and Jason Chuang and Christopher D. Manning and Andrew Y. Ng and Christopher Potts},
+  booktitle={EMNLP},
+  year={2013}
   }
 
 # The full name of the subtask that should be displayed e.g. on the website.
 # Example: MultiNLI
-displayname: MultiNLI
+displayname: SST-2
 
 # The identifier of the language of the data in this subtask
 language: english
@@ -40,4 +37,4 @@ metric:
   higher_is_better: true
 
 # A URL pointing to more information on this subtask.
-url: "https://github.com/NYU-MLL/multiNLI"
+url: "https://nlp.stanford.edu/sentiment/index.html"
