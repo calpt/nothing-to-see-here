@@ -12,8 +12,7 @@ subtask: sst-2
 
 # A short description of this subtask (max. 500 chars).
 description: |
-  The Stanford Sentiment Treebank is abinary single-sentence classification task consist-ing of sentences extracted
-  from  movie  reviews with human annotations of their sentiment. 
+  The Stanford Sentiment Treebank is a binary single-sentence classification task consisting of sentences extracted from movie reviews with human annotations of their sentiment. 
 
 # A bibtex citation of the work related to this subtask.
 citation: |
