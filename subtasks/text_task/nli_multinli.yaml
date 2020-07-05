@@ -12,9 +12,8 @@ subtask: multinli
 
 # A short description of this subtask (max. 500 chars).
 description: |
-  Multi-Genre Natural Language Inference is a large-scale, crowdsourced entailment classification task (Williams et al., 2018).
-  Given a pair of sentences, the goal is to predict whether the second  sentence  is  an entailment,
-  contradiction,  or neutral with respect to the first one.
+  Multi-Genre Natural Language Inference is a large-scale, crowdsourced entailment classification task.
+  Given a pair of sentences, the goal is to predict whether the second sentence is an entailment, contradiction, or neutral with respect to the first one.
 
 # A bibtex citation of the work related to this subtask.
 citation: |
