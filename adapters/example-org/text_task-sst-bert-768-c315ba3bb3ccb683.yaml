@@ -24,7 +24,7 @@ citation: |
 default_version: "1"
 files:
   - version: "1"
-    sha1: "ee39c07db6f4545a8c1ca4098cd3f15275a3f6cd"
+    sha1: "FAE8B91CBC1FE7E26D776DA491D7D265EBE7CBB6"
     url: "http://adapter-hub.webredirect.org/repo/files/text_task-sst-bert-768-c315ba3bb3ccb683.zip"
 
 hidden_size: 768
