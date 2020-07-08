@@ -14,8 +14,8 @@ url: "https://github.com/calpt"
 default_version: "1"
 files:
   - version: "1"
-    sha1: "bd36f46efbe875cdffb18a5547534036ec6ad0c5"
-    url: "http://adapter-hub.webredirect.org/repo/files/text_task-sst-2-bert-768-111c481840064218.zip"
+    sha1: "FAE8B91CBC1FE7E26D776DA491D7D265EBE7CBB6"
+    url: "http://adapter-hub.webredirect.org/repo/files/text_task-sst-bert-768-c315ba3bb3ccb683.zip"
 
 citation: |
   @misc{pfeiffer2020adapterfusion,
