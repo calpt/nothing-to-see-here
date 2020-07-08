@@ -1,10 +1,11 @@
 {
   "config_id": "bb1c8efb82510bed",
-  "default_version": "1",
+  "default_version": "2",
   "files": {
-    "1": {
-      "sha1": "bd36f46efbe875cdffb18a5547534036ec6ad0c5",
-      "url": "http://adapter-hub.webredirect.org/repo/files/text_task-sst-2-bert-768-111c481840064218.zip"
+    "2": {
+      "sha1": "7473209089242e423b1f0a9d8c7ba9272b6519b2",
+      "sha256": "4432b9559e2f41337d52005e7b41c1c6a675e811f5eaea4411b6c769c2b2ea93",
+      "url": "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mrpc/bert-base-uncased/pfeiffer/mrpc.zip"
     }
   }
 }
