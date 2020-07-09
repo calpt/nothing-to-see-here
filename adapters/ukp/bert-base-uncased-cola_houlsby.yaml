@@ -29,7 +29,7 @@ config: # TODO: REQUIRED
   using: houlsby
 
 # The version to be downloaded if no version is explicitly stated.
-default_version: "nd"
+default_version: "1"
 
 # A short description of this adapter.
 description: |
