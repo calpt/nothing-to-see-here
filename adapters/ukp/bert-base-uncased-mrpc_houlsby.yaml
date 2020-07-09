@@ -43,7 +43,7 @@ files:
   - sha1: "b5db67f243b7d34cf6bb603f290730b021707fef"
     sha256: "c54c18173048412bc2f46be87a7ee4ab2bb9bd593847314c75ab25817a6bf6a5"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mrpc/bert-base-uncased/houlsby/bert-base-uncased_mnli_houlsby.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mrpc/bert-base-uncased/houlsby/bert-base-uncased_mrpc_houlsby.zip"
     version: "1"
 
 
