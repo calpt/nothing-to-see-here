@@ -43,7 +43,7 @@ files:
   - sha1: "641683d84d7bc7dee3163c94c8d99f71a0b8a10c"
     sha256: "d934a0242c60edcc458608c0c8d4bc464ba1ccce4d762faaf9edf2b3711d5a4b"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/cola/bert-base-uncased/pfeiffer/bert-base-uncased_mnli_pfeiffer.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mnli/bert-base-uncased/pfeiffer/bert-base-uncased_mnli_pfeiffer.zip"
     version: "1"
 
 
