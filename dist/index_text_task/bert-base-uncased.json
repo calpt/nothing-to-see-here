@@ -29,6 +29,20 @@
             }
         }
     },
+    "nli": {
+        "multinli": {
+            "b1017368d7a97b11": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-mnli_houlsby.json"
+                }
+            },
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-mnli_pfeiffer.json"
+                }
+            }
+        }
+    },
     "sentiment": {
         "sst": {
             "bb1c8efb82510bed": {
