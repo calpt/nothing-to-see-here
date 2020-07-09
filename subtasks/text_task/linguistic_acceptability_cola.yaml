@@ -4,7 +4,7 @@
 
 # The short identifier of the task this subtask belongs to.
 # Example: nli
-task: acceptability
+task: lingaccept
 
 # The short identifier of this subtask.
 # Example: multinli
