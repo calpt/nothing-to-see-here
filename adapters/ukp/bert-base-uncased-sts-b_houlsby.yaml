@@ -33,17 +33,17 @@ default_version: "1"
 
 # A short description of this adapter.
 description: |
-  Houlsby Adapter trained on the SST-2 task with the default run_glue.py script.
+  Houlsby Adapter trained on the STS-Benchmark task with the default run_glue.py script.
 
 # A contact email of the author(s).
 email: "poth@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "fc72051633a15c0130a4cc1ea8453c489a1c5b7a"
-    sha256: "002899a44b813766cd3fa22a3960f0528663213a7171d4fcaffd096a8d4422db"
+  - sha1: "b9de91d6341a4ed239cb79f669e778f5d9e7d37e"
+    sha256: "aeb934a55244defcb5df637aefc35795ca3fa88a6134effc5e6de7c02e8dae1e"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sst/bert-base-uncased/houlsby/bert-base-uncased_sst-2_houlsby.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/bert-base-uncased/houlsby/bert-base-uncased_sts-b_houlsby.zip"
     version: "1"
 
 
@@ -62,10 +62,10 @@ model_name: "bert-base-uncased"
 model_type: bert
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: sst
+subtask: sts-b
 
 # The string identifier of the task this adapter belongs to.
-task: sentiment
+task: sts
 
 # A Twitter handle associated with the author(s).
 twitter: "@calpt"
