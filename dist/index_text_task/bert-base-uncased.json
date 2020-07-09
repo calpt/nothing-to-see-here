@@ -53,6 +53,18 @@
                     "ukp": "adapters/ukp/bert-base-uncased-qnli_pfeiffer.json"
                 }
             }
+        },
+        "rte": {
+            "b1017368d7a97b11": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-rte_houlsby.json"
+                }
+            },
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-rte_pfeiffer.json"
+                }
+            }
         }
     },
     "sentiment": {
@@ -61,6 +73,18 @@
                 "versions": {
                     "calpt": "adapters/calpt/bert-base-uncased_sst-2_pfeiffer.json",
                     "example-org": "adapters/example-org/text_task-sst-bert-768-c315ba3bb3ccb683.json"
+                }
+            }
+        },
+        "sst-2": {
+            "b1017368d7a97b11": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-sst_houlsby.json"
+                }
+            },
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-sst_pfeiffer.json"
                 }
             }
         }
@@ -76,6 +100,30 @@
                 "versions": {
                     "calpt": "adapters/calpt/bert-base-uncased_mrpc_pfeiffer.json",
                     "ukp": "adapters/ukp/bert-base-uncased-mrpc_pfeiffer.json"
+                }
+            }
+        },
+        "qqp": {
+            "b1017368d7a97b11": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-qqp_houlsby.json"
+                }
+            },
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-qqp_pfeiffer.json"
+                }
+            }
+        },
+        "sts-b": {
+            "b1017368d7a97b11": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-sts-b_houlsby.json"
+                }
+            },
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-sts-b_pfeiffer.json"
                 }
             }
         }
