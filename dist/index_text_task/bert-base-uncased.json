@@ -55,9 +55,15 @@
     },
     "sts": {
         "mrpc": {
+            "b1017368d7a97b11": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-mrpc_houlsby.json"
+                }
+            },
             "bb1c8efb82510bed": {
                 "versions": {
-                    "calpt": "adapters/calpt/bert-base-uncased_mrpc_pfeiffer.json"
+                    "calpt": "adapters/calpt/bert-base-uncased_mrpc_pfeiffer.json",
+                    "ukp": "adapters/ukp/bert-base-uncased-mrpc_pfeiffer.json"
                 }
             }
         }
