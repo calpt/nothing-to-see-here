@@ -62,7 +62,7 @@ model_name: "bert-base-uncased"
 model_type: bert
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: sst
+subtask: sst-2
 
 # The string identifier of the task this adapter belongs to.
 task: sentiment
