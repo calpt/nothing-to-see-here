@@ -27,7 +27,7 @@ default_version: "AdapterFusion"
 
 # A short description of this adapter.
 description: |
-  Houlsby Adapter trained on the SST-2 task with the default run_glue.py script.
+  Pfeiffer Adapter trained on the SST-2 task.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
