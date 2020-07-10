@@ -1,0 +1,11 @@
+{
+    "sentiment": {
+        "sst-2": {
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "ukp": "adapters/ukp/roberta-base-sst_pfeiffer.json"
+                }
+            }
+        }
+    }
+}
