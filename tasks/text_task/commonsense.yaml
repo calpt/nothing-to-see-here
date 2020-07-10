@@ -1,4 +1,4 @@
-task: commonsense
+task: comsense
 displayname: Common Sense Reasoning
 description: |
   Common sense reasoning tasks are intended to require the model to go beyond pattern recognition.
