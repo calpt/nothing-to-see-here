@@ -45,7 +45,11 @@ files:
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mnli/bert-base-uncased/pfeiffer/bert-base-uncased_mnli_pfeiffer.zip"
     version: "1"
-
+  - sha1: "86860b1bef83802018aca1d09a2b73b79ffd1e6f"
+    sha256: "dc61847e6aa9aa1b9533285e63e3afb4422cae69650e2d73a65b2ac5f72eede6"
+    # Download URL pointing to a zip folder containing the adapter module.
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mnli/bert-base-uncased/pfeiffer/multinli_relu_16.zip"
+    version: "AdapterFusion"
 
 # A GitHub handle associated with the author(s).
 github: "calpt"
