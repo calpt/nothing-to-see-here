@@ -4,6 +4,7 @@
 
 # The short identifier of the task this subtask belongs to.
 # Example: nli
+
 task: comsense
 
 # The short identifier of this subtask.
@@ -13,8 +14,8 @@ subtask: csqa
 # A short description of this subtask (max. 500 chars).
 description: |
    To investigate question answering with prior knowledge, we present CommonsenseQA: a challenging new dataset for
-  commonsense question answering. To capture common sense beyond associations, we extract from ConceptNet
-  (Speer et al., 2017) multiple target concepts that have the same semantic relation to a single source concept.
+   commonsense question answering. To capture common sense beyond associations, we extract from ConceptNet
+   (Speer et al., 2017) multiple target concepts that have the same semantic relation to a single source concept.
 
 # A bibtex citation of the work related to this subtask.
 citation: |
