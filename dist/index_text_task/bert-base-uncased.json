@@ -1,20 +1,4 @@
 {
-    "dummy": {
-        "dummy": {
-            "bb1c8efb82510bed": {
-                "versions": {
-                    "dummies": "adapters/dummies/bert-base_clf-head.json"
-                }
-            }
-        },
-        "dummy2": {
-            "bb1c8efb82510bed": {
-                "versions": {
-                    "dummies": "adapters/dummies/bert-base_bertforseqclass.json"
-                }
-            }
-        }
-    },
     "lingaccept": {
         "cola": {
             "b1017368d7a97b11": {
@@ -68,14 +52,6 @@
         }
     },
     "sentiment": {
-        "sst": {
-            "bb1c8efb82510bed": {
-                "versions": {
-                    "calpt": "adapters/calpt/bert-base-uncased_sst-2_pfeiffer.json",
-                    "example-org": "adapters/example-org/text_task-sst-bert-768-c315ba3bb3ccb683.json"
-                }
-            }
-        },
         "sst-2": {
             "b1017368d7a97b11": {
                 "versions": {
@@ -98,7 +74,6 @@
             },
             "bb1c8efb82510bed": {
                 "versions": {
-                    "calpt": "adapters/calpt/bert-base-uncased_mrpc_pfeiffer.json",
                     "ukp": "adapters/ukp/bert-base-uncased-mrpc_pfeiffer.json"
                 }
             }
