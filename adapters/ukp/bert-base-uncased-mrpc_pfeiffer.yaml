@@ -45,6 +45,11 @@ files:
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mrpc/bert-base-uncased/pfeiffer/bert-base-uncased_mrpc_pfeiffer.zip"
     version: "1"
+  - sha1: "d45ce448b3c83f92b7bfea9339cf11c2e7980be6"
+    sha256: "9c1f2f56d238170c5ba042fab5077dc8ad5d44585a742d476d935947b1fb1bc0"
+    # Download URL pointing to a zip folder containing the adapter module.
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mrpc/bert-base-uncased/pfeiffer/mrpc_relu_16.zip"
+    version: "AdapterFusion"
 
 
 # A GitHub handle associated with the author(s).
