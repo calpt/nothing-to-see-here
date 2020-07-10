@@ -34,8 +34,8 @@ email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "b319a961731b2d03e5a2f7486e226ec74304dcd2"
-    sha256: "71d8270e876ea45a5c6d53b4832750c75ccbb077e9d6c46c54a682ec0c51d485"
+  - sha1: "7e9c817664b5eef95961e52ee5abf0a18538c643"
+    sha256: "00cf7030735eb359c6541b1a7e7a631c37f903a793cd8825cf383e8b0941ee27"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sst/roberta-base/pfeiffer/sst-2_relu_16.zip"
     version: "AdapterFusion"
