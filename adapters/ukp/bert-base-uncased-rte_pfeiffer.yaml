@@ -45,6 +45,11 @@ files:
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/rte/bert-base-uncased/pfeiffer/bert-base-uncased_rte_pfeiffer.zip"
     version: "1"
+  - sha1: "e279dc7f25c915c2fb6686636c1239ce3e10ae5e"
+    sha256: "459a04ef9d53e89fdc3c4f44f650245b8cb5910ec11fc7759f7fdfaf54016533"
+    # Download URL pointing to a zip folder containing the adapter module.
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/rte/bert-base-uncased/pfeiffer/rte_relu_16.zip"
+    version: "AdapterFusion"
 
 
 # A GitHub handle associated with the author(s).
