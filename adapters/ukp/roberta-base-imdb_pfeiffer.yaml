@@ -27,17 +27,17 @@ default_version: "AdapterFusion"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained on the SST-2 task.
+  Pfeiffer Adapter trained on the IMDb dataset.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "1dcda5945b88791d9c80b574f31a0ae7446192a5"
-    sha256: "21b4223e94f9b23d282b3bea17e8bcc0d8e565b415a635aebb6291f794489683"
+  - sha1: "416d80ce6b5a6eb5f21429933881ad6dbef4c33b"
+    sha256: "812a5698c4ce3d05a6d4b68efbf8a1128a26908e359b2ae6a168b36f82dcb641"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sst/roberta-base/pfeiffer/sst-2_relu_16.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/imdb/roberta-base/pfeiffer/imdb_relu_16.zip"
     version: "AdapterFusion"
 
 
@@ -56,7 +56,7 @@ model_name: "roberta-base"
 model_type: roberta
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: sst-2
+subtask: imdb
 
 # The string identifier of the task this adapter belongs to.
 task: sentiment

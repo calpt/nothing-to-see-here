@@ -27,17 +27,17 @@ default_version: "AdapterFusion"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained on the SST-2 task.
+  Pfeiffer Adapter trained on Commonsense QA.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "1dcda5945b88791d9c80b574f31a0ae7446192a5"
-    sha256: "21b4223e94f9b23d282b3bea17e8bcc0d8e565b415a635aebb6291f794489683"
+  - sha1: "33413a3eb0bdc5686c78590c76d5ac2c26bb3a6c"
+    sha256: "1b746725ab90f3cdc64fc0045330f3c970d201f58a8633673b1a95575276e884"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sst/roberta-base/pfeiffer/sst-2_relu_16.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/csqa/roberta-base/pfeiffer/csqa_relu_16.zip"
     version: "AdapterFusion"
 
 
@@ -56,10 +56,10 @@ model_name: "roberta-base"
 model_type: roberta
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: sst-2
+subtask: csqa
 
 # The string identifier of the task this adapter belongs to.
-task: sentiment
+task: comsense
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"

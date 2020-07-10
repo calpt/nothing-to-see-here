@@ -27,17 +27,17 @@ default_version: "AdapterFusion"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained on the SST-2 task.
+  Pfeiffer Adapter trained on HellaSwag.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "1dcda5945b88791d9c80b574f31a0ae7446192a5"
-    sha256: "21b4223e94f9b23d282b3bea17e8bcc0d8e565b415a635aebb6291f794489683"
+  - sha1: "728c859884b8d9fdd82995fcb0bdd1a80e74c1d1"
+    sha256: "e1b1a3c805445338933e6a894b42d01c085300dfb77f8821ea8ee6e2dc6b5180"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sst/roberta-base/pfeiffer/sst-2_relu_16.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/hellaswag/roberta-base/pfeiffer/hellaswag_relu_16.zip"
     version: "AdapterFusion"
 
 
@@ -56,10 +56,10 @@ model_name: "roberta-base"
 model_type: roberta
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: sst-2
+subtask: hellaswag
 
 # The string identifier of the task this adapter belongs to.
-task: sentiment
+task: comsense
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"

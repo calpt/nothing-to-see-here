@@ -27,17 +27,17 @@ default_version: "AdapterFusion"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained on the SST-2 task.
+  Pfeiffer Adapter trained on SciTail.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "1dcda5945b88791d9c80b574f31a0ae7446192a5"
-    sha256: "21b4223e94f9b23d282b3bea17e8bcc0d8e565b415a635aebb6291f794489683"
+  - sha1: "216daf114efe16b487981493c7f78de0c6288de2"
+    sha256: "6d7273608a987fb6ee01c0c53169da7a8cbdb25bc670bce27e42806e6056deae"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sst/roberta-base/pfeiffer/sst-2_relu_16.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/scitail/roberta-base/pfeiffer/scitail_relu_16.zip"
     version: "AdapterFusion"
 
 
@@ -56,10 +56,10 @@ model_name: "roberta-base"
 model_type: roberta
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: sst-2
+subtask: scitail
 
 # The string identifier of the task this adapter belongs to.
-task: sentiment
+task: nli
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"

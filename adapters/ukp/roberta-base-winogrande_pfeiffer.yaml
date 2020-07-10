@@ -27,17 +27,17 @@ default_version: "AdapterFusion"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained on the SST-2 task.
+  Pfeiffer Adapter trained on the WinoGrande dataset.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "1dcda5945b88791d9c80b574f31a0ae7446192a5"
-    sha256: "21b4223e94f9b23d282b3bea17e8bcc0d8e565b415a635aebb6291f794489683"
+  - sha1: "7049fe02db5416a99f7037fbd0066e4b7e21bb8d"
+    sha256: "19f0a269dbd6bdc29555d500b613f24587527da6c6ab3b21bbf90036d4544d83"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sst/roberta-base/pfeiffer/sst-2_relu_16.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/winogrande/roberta-base/pfeiffer/winogrande_relu_16.zip"
     version: "AdapterFusion"
 
 
@@ -56,10 +56,10 @@ model_name: "roberta-base"
 model_type: roberta
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: sst-2
+subtask: winogrande
 
 # The string identifier of the task this adapter belongs to.
-task: sentiment
+task: comsense
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"
