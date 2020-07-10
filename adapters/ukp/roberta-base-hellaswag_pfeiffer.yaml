@@ -56,7 +56,7 @@ model_name: "roberta-base"
 model_type: roberta
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: csqa
+subtask: hellaswag
 
 # The string identifier of the task this adapter belongs to.
 task: comsense
