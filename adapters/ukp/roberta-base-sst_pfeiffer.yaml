@@ -37,7 +37,7 @@ files:
   - sha1: "b319a961731b2d03e5a2f7486e226ec74304dcd2"
     sha256: "71d8270e876ea45a5c6d53b4832750c75ccbb077e9d6c46c54a682ec0c51d485"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sst/roberta-base-uncased/pfeiffer/sst-2_relu_16.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sst/roberta-base/pfeiffer/sst-2_relu_16.zip"
     version: "AdapterFusion"
 
 
@@ -49,7 +49,7 @@ hidden_size: 768
 
 # The string identifier of the pre-trained model (by which it is identified at Huggingface).
 # Example: bert-base-uncased
-model_name: "roberta-base-uncased"
+model_name: "roberta-base"
 
 # The model type.
 # Example: bert
