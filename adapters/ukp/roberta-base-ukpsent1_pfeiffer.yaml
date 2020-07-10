@@ -27,7 +27,7 @@ default_version: "AdapterFusion"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained on the UKP Sentential Argument Mining task.
+  Pfeiffer Adapter trained on the UKP Sentential Argument Mining dataset.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
