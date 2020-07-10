@@ -31,6 +31,7 @@ Placed in `/dist/index_<type>/<model_name>.json`.
 {
     <task>: {
         <subtask>: {
+            "default": "<org_name>/<file_name>.json",
             <config_id>: {
                 "default": "<org_name>",
                 "versions": {
@@ -50,13 +51,4 @@ Placed in `/dist/index_<type>/<model_name>.json`.
 
 Placed in `/adapters/<org_name>/<file_name>.yaml`.
 
-```yaml
-model_name: <model_name>,
-type: <type>
-task: <task>,
-subtask: <subtask>
-...
-config_id: <id>,
-config: <config>,
-...
-```
+Schema defined in `/scripts/schemas/adapter.schema.json`.

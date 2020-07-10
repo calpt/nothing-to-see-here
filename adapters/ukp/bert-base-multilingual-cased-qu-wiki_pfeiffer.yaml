@@ -15,11 +15,12 @@ citation: |
     url={https://arxiv.org/pdf/2005.00052.pdf},
   }
 
+# The string identifier of the adapter architecture (must be available in architecture).
 # Describes the adapter architecture used by this adapter
 config: # TODO: REQUIRED
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
   # Example: pfeiffer
-  using: houlsby
+  using: pfeiffer
   # Overrides the default activation function of the specified adapter architecture.
   # Example: tanh
   non_linearity: gelu
@@ -32,18 +33,23 @@ default_version: "nd"
 
 # A short description of this adapter.
 description: |
-    Houlsby Adapter trained with Masked Language Modelling on English Wikipedia Articles for 250k steps and a batch size of 64.
+  Pfeiffer Adapter trained with Masked Language Modelling on Quechuan Wikipedia Articles for 50k steps and a batch size of 64.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "f9053b8bef00ecf9bcbdacbd7b27497a40d12308"
-    sha256: "e288df87a90238991a23855bc4e20cd3394d3ad24a85673d9b0b1f99163c0013"
+  - sha1: "77533861a58987dc6b1639242dd6a08a89e755a4"
+    sha256: "c78b7c901d66a2735d88399f640f9cdd38ce085acd0efe4082ede98e4db7e708"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/en_houlsby_nd.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/qu/bert-base-multilingual-cased/pfeiffer/qu_pfeiffer_gelu_nd.zip"
     version: "nd"
+  - sha1: "a0f2e91658e83095af874a78b31ce35421c61b76"
+    sha256: "1a290e2058dc8b4f3e3ee95a208d0e815b82f83f6f4bbd0c883e01866ecd5439"
+    # Download URL pointing to a zip folder containing the adapter module.
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/qu/bert-base-multilingual-cased/pfeiffer/qu_pfeiffer_gelu.zip"
+    version: "wd"
 #   - ...
 
 # A GitHub handle associated with the author(s).
@@ -64,7 +70,7 @@ model_type: bert
 subtask: wiki
 
 # The string identifier of the task this adapter belongs to.
-task: en
+task: qu
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"

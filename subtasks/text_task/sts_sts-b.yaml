@@ -4,39 +4,38 @@
 
 # The short identifier of the task this subtask belongs to.
 # Example: nli
-task: nli
+task: sts
 
 # The short identifier of this subtask.
 # Example: multinli
-subtask: multinli
+subtask: sts-b
 
 # A short description of this subtask (max. 500 chars).
 description: |
-  Multi-Genre Natural Language Inference is a large-scale, crowdsourced entailment classification task.
-  Given a pair of sentences, the goal is to predict whether the second sentence is an entailment, contradiction, or neutral with respect to the first one.
+  The Semantic Textual Similarity Benchmark is a collection of sentence pairs drawn from news headlines and other sources.
+  They were annotated with a score from 1 to 5 denoting how similar the two sentences are in terms of semantic meaning.
 
 # A bibtex citation of the work related to this subtask.
 citation: |
-  @misc{williams2017broadcoverage,
-    title={A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference},
-    author={Adina Williams and Nikita Nangia and Samuel R. Bowman},
-    year={2017},
-    eprint={1704.05426},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL}
+  @article{cer2017semeval,
+    title={Semeval-2017 task 1: Semantic textual similarity-multilingual and cross-lingual focused evaluation},
+    author={Cer, Daniel and Diab, Mona and Agirre, Eneko and Lopez-Gazpio, Inigo and Specia, Lucia},
+    journal={arXiv preprint arXiv:1708.00055},
+    year={2017}
   }
+
 
 # The full name of the subtask that should be displayed e.g. on the website.
 # Example: MultiNLI
-displayname: MultiNLI
+displayname: STS-B
 
 # The identifier of the language of the data in this subtask
 language: english
 
 # The default evaluation metric of this subtask.
-metric:
-  name: accuracy
+metric: 
+  name: spearmanr
   higher_is_better: true
 
 # A URL pointing to more information on this subtask.
-url: "https://github.com/NYU-MLL/multiNLI"
+url: "http://ixa2.si.ehu.es/stswiki/index.php/STSbenchmark"

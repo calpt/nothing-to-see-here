@@ -3,74 +3,75 @@
 # --------------------
 
 # The name of the author(s) of this adapter.
-author: "Jonas Pfeiffer"
+author: "Clifton Poth"
 
 # A bibtex citation of the work related to this adapter.
 citation: |
-  @article{pfeiffer20madx,
-    title={{MAD-X}: An {A}dapter-based {F}ramework for {M}ulti-task {C}ross-lingual {T}ransfer},
-    author={Pfeiffer, Jonas and Vuli\'{c}, Ivan and Gurevych, Iryna and Ruder, Sebastian},
-    journal={arXiv preprint},
-    year={2020},
-    url={https://arxiv.org/pdf/2005.00052.pdf},
+  @article{pfeiffer2020AdapterHub,
+      title={AdapterHub: A Framework for Adapting Transformers},
+      author={Jonas Pfeiffer,
+              Andreas R\"uckl\'{e},
+              Clifton Poth,
+              Aishwarya Kamath,
+              Ivan Vuli\'{c},
+              Sebastian Ruder,
+              Kyunghyun Cho,
+              Iryna Gurevych},
+      journal={ArXiv},
+      year={2020}
   }
 
+# The string identifier of the adapter architecture (must be available in architecture).
 # Describes the adapter architecture used by this adapter
 config: # TODO: REQUIRED
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
   # Example: pfeiffer
   using: houlsby
-  # Overrides the default activation function of the specified adapter architecture.
-  # Example: tanh
-  non_linearity: gelu
-  # Overrides the default reduction factor of the specified adapter architecture
-  # Example: 64
-  reduction_factor: 2
 
 # The version to be downloaded if no version is explicitly stated.
-default_version: "nd"
+default_version: "1"
 
 # A short description of this adapter.
 description: |
-    Houlsby Adapter trained with Masked Language Modelling on English Wikipedia Articles for 250k steps and a batch size of 64.
+  Houlsby Adapter trained on the CoLA task with the default run_glue.py script.
 
 # A contact email of the author(s).
-email: "pfeiffer@ukp.informatik.tu-darmstadt"
+email: "poth@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "f9053b8bef00ecf9bcbdacbd7b27497a40d12308"
-    sha256: "e288df87a90238991a23855bc4e20cd3394d3ad24a85673d9b0b1f99163c0013"
+  - sha1: "304a3b44ea75931bd95e171a4582b6759ad87704"
+    sha256: "2e1cb1b240043f1c85703d005459828c56ef517c1ac0da78eb35e5068e370c07"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/en_houlsby_nd.zip"
-    version: "nd"
-#   - ...
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/cola/bert-base-uncased/houlsby/bert-base-uncased_cola_houlsby.zip"
+    version: "1"
+
 
 # A GitHub handle associated with the author(s).
-github: "jopfeiff"
+github: "calpt"
 
 # The hidden size of the model
 hidden_size: 768
 
 # The string identifier of the pre-trained model (by which it is identified at Huggingface).
 # Example: bert-base-uncased
-model_name: "bert-base-multilingual-cased"
+model_name: "bert-base-uncased"
 
 # The model type.
 # Example: bert
 model_type: bert
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: wiki
+subtask: cola
 
 # The string identifier of the task this adapter belongs to.
-task: en
+task: lingaccept
 
 # A Twitter handle associated with the author(s).
-twitter: "@PfeiffJo"
+twitter: "@calpt"
 
 # The type of adapter (one of the options available in `adapter_type`.
-type: "text_lang"
+type: "text_task"
 
 # A URL providing more information on this adapter/ the authors/ the organization.
-url: "https://pfeiffer.ai"
+url: "https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp"

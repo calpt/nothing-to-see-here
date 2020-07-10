@@ -15,6 +15,7 @@ citation: |
     url={https://arxiv.org/pdf/2005.00052.pdf},
   }
 
+# The string identifier of the adapter architecture (must be available in architecture).
 # Describes the adapter architecture used by this adapter
 config: # TODO: REQUIRED
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
@@ -32,18 +33,23 @@ default_version: "nd"
 
 # A short description of this adapter.
 description: |
-    Houlsby Adapter trained with Masked Language Modelling on English Wikipedia Articles for 250k steps and a batch size of 64.
+  Houlsby Adapter trained with Masked Language Modelling on Turkmen Wikipedia Articles for 50k steps and a batch size of 64.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "f9053b8bef00ecf9bcbdacbd7b27497a40d12308"
-    sha256: "e288df87a90238991a23855bc4e20cd3394d3ad24a85673d9b0b1f99163c0013"
+  - sha1: "1085f67f6ed1280ff93a877e3630fed8c1a3e54d"
+    sha256: "a31f0cebed77cd0f5367f32bc903fbab15081bebf8312dc5cbd8cebcead84a86"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/en_houlsby_nd.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/tk/bert-base-multilingual-cased/houlsby/tk_houlsby_gelu_nd.zip"
     version: "nd"
+  - sha1: "bdb039b4beb769125c2151aaac94e14c61deec20"
+    sha256: "668c04c4421d0d55e9206c5275fb9e7018843ea46a8908e52862a45170239f84"
+    # Download URL pointing to a zip folder containing the adapter module.
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/tk/bert-base-multilingual-cased/houlsby/tk_houlsby_gelu.zip"
+    version: "wd"
 #   - ...
 
 # A GitHub handle associated with the author(s).
@@ -64,7 +70,7 @@ model_type: bert
 subtask: wiki
 
 # The string identifier of the task this adapter belongs to.
-task: en
+task: tk
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"

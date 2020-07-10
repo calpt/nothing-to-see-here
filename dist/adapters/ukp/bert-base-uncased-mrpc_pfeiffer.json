@@ -1,0 +1,11 @@
+{
+  "config_id": "bb1c8efb82510bed",
+  "default_version": "1",
+  "files": {
+    "1": {
+      "sha1": "bcf053c9d887c2582095553c6fefe2a1e4edfb3e",
+      "sha256": "80838601bc257b3c2568cae21226b907036c8cfbd7123d86c4f15b102621df69",
+      "url": "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mrpc/bert-base-uncased/pfeiffer/bert-base-uncased_mrpc_pfeiffer.zip"
+    }
+  }
+}
