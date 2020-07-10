@@ -1,4 +1,4 @@
-task: commonsense
+task: comsense
 subtask: hellaswag
 displayname: HellaSwag
 description: |
