@@ -1,9 +1,0 @@
-task: as
-subtask: wiki
-description: |
-  Language modeling for the Assamese language on Wikipedia.
-  Assamese, also Asamiya, is an Eastern Indo-Aryan language spoken mainly in the
-  Indian state of Assam, where it is an official language.
-url: ""
-citation: ""
- 
