@@ -33,17 +33,17 @@ default_version: "madx"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained with Masked Language Modelling on German Wikipedia Articles for 250k steps and a batch size of 64.
+  Pfeiffer Adapter trained with Masked Language Modelling on Greek Wikipedia Articles for 250k steps and a batch size of 64.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "fdc19d911942ea1ebe8cc0e645f4c62453e11c58"
-    sha256: "7327002ffc9a6dca8c8b0b30158ea34bee529b05a153d62878b7da1f585bd5fb"
+  - sha1: "01c19b43c8959a58f3a4e331a0494f2853ac752d"
+    sha256: "4dab721cedd8a53061c4b1fb17f4e0ee0134675906fe484173e94ed3b35da03a"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/de/xlm-roberta-base/pfeiffer/de_relu_2.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/el/xlm-roberta-base/pfeiffer/el_relu_2.zip"
     version: "madx"
 
 
@@ -65,7 +65,7 @@ model_type: xlm-roberta
 subtask: wiki
 
 # The string identifier of the task this adapter belongs to.
-task: de
+task: el
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"

@@ -40,8 +40,8 @@ email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "442db36b219061bdac0563f62dcacb91cb5abb53"
-    sha256: "c2315c947ef84aca03664bea0aabc4f4b6410c2bcfd9e2387e1576f6eb4fd7d6"
+  - sha1: "afb6d22096a0b74fdbf8f240ff14ae72c6d24f22"
+    sha256: "3cdfc224f55e1622f08fe3ab1a29d4eb21acfcaa2c846bf198e631bb764c9867"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/cdo/xlm-roberta-base/pfeiffer/cdo_relu_2.zip"
     version: "madx"
