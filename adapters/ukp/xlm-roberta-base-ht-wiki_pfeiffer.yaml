@@ -33,7 +33,7 @@ default_version: "madx"
 
 # A short description of this adapter.
 description: |
-  Pfeiffer Adapter trained with Masked Language Modelling on Hindi Wikipedia Articles for 250k steps and a batch size of 64.
+  Pfeiffer Adapter trained with Masked Language Modelling on Haitian Creole Wikipedia Articles for 50k steps and a batch size of 64.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
@@ -43,7 +43,7 @@ files:
   - sha1: "d4362a7d06d8f0fe53c40648e46a89eeb5c537b6"
     sha256: "151f96bc93ed734f713037d3eb7be142e9144dc9677307739c87fbb5ef33a661"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/hi/xlm-roberta-base/pfeiffer/hi_relu_2.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/ht/xlm-roberta-base/pfeiffer/ht_relu_2.zip"
     version: "madx"
 
 
@@ -65,7 +65,7 @@ model_type: xlm-roberta
 subtask: wiki
 
 # The string identifier of the task this adapter belongs to.
-task: hi
+task: ht
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"
