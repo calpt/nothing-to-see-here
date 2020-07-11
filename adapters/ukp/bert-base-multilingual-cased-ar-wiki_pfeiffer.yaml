@@ -15,11 +15,12 @@ citation: |
     url={https://arxiv.org/pdf/2005.00052.pdf},
   }
 
+# The string identifier of the adapter architecture (must be available in architecture).
 # Describes the adapter architecture used by this adapter
 config: # TODO: REQUIRED
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
   # Example: pfeiffer
-  using: houlsby
+  using: pfeiffer
   # Overrides the default activation function of the specified adapter architecture.
   # Example: tanh
   non_linearity: gelu
@@ -32,22 +33,22 @@ default_version: "nd"
 
 # A short description of this adapter.
 description: |
-    Houlsby Adapter trained with Masked Language Modelling on English Wikipedia Articles for 250k steps and a batch size of 64.
+  Pfeiffer Adapter trained with Masked Language Modelling on Arabic Wikipedia Articles for 250k steps and a batch size of 64.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "f9053b8bef00ecf9bcbdacbd7b27497a40d12308"
-    sha256: "e288df87a90238991a23855bc4e20cd3394d3ad24a85673d9b0b1f99163c0013"
+  - sha1: "c987fa8b9fe165413ca4135730c507c4e5015e79"
+    sha256: "e9353ab113e81d65d7e50ef78a69fa33612928f4969880950ab50d745b373278"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/en_houlsby_nd.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/ar/bert-base-multilingual-cased/pfeiffer/ar_pfeiffer_gelu_nd.zip"
     version: "nd"
-  - sha1: "8cf4a8fbddb79b8701e1d7d066ea4aa5b936cc7d"
-    sha256: "d52f128b3710e912164f502531a22251b8fa40b1306edfcb6deab504df175ce8"
+  - sha1: "a8f0f11e1650c466f758e1b9ecf097b9647127cf"
+    sha256: "727752aaafaf9382dfbacf109da46c6b7eac41026587dbd744a4d2354e548f21"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/en_houlsby_gelu.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/ar/bert-base-multilingual-cased/pfeiffer/ar_pfeiffer_gelu.zip"
     version: "wd"
 #   - ...
 
@@ -69,7 +70,7 @@ model_type: bert
 subtask: wiki
 
 # The string identifier of the task this adapter belongs to.
-task: en
+task: ar
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"

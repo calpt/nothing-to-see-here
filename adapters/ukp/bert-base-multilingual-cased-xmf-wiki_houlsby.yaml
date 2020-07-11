@@ -15,6 +15,7 @@ citation: |
     url={https://arxiv.org/pdf/2005.00052.pdf},
   }
 
+# The string identifier of the adapter architecture (must be available in architecture).
 # Describes the adapter architecture used by this adapter
 config: # TODO: REQUIRED
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
@@ -32,22 +33,22 @@ default_version: "nd"
 
 # A short description of this adapter.
 description: |
-    Houlsby Adapter trained with Masked Language Modelling on English Wikipedia Articles for 250k steps and a batch size of 64.
+  Houlsby Adapter trained with Masked Language Modelling on Mingrelian Wikipedia Articles for 50k steps and a batch size of 64.
 
 # A contact email of the author(s).
 email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "f9053b8bef00ecf9bcbdacbd7b27497a40d12308"
-    sha256: "e288df87a90238991a23855bc4e20cd3394d3ad24a85673d9b0b1f99163c0013"
+  - sha1: "108d4ae6c23bfe6067e2979fd1ea5951b676b865"
+    sha256: "0f3b2ac7711d10ffee1eede59d421b1e3548a8d033975d46d789aa4e853a5901"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/en_houlsby_nd.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/xmf/bert-base-multilingual-cased/houlsby/xmf_houlsby_gelu_nd.zip"
     version: "nd"
-  - sha1: "8cf4a8fbddb79b8701e1d7d066ea4aa5b936cc7d"
-    sha256: "d52f128b3710e912164f502531a22251b8fa40b1306edfcb6deab504df175ce8"
+  - sha1: "a84a3a0beaf545c7fd817cca8905e77ed1474ebd"
+    sha256: "8b3f1960172e50d606f5441554ef7f2a91af4b890667738be66fe1abca991093"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/en/bert-base-multilingual-cased/houlsby/en_houlsby_gelu.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/xmf/bert-base-multilingual-cased/houlsby/xmf_houlsby_gelu.zip"
     version: "wd"
 #   - ...
 
@@ -69,7 +70,7 @@ model_type: bert
 subtask: wiki
 
 # The string identifier of the task this adapter belongs to.
-task: en
+task: xmf
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"
