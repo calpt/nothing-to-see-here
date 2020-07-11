@@ -36,7 +36,7 @@ description: |
   Houlsby Adapter trained on the SST-2 task with the default run_glue.py script.
 
 # A contact email of the author(s).
-email: "poth@ukp.informatik.tu-darmstadt"
+email: "poth@ukp.informatik.tu-darmstadt.de"
 
 # A list of different versions of this adapter available for download.
 files:
@@ -68,7 +68,7 @@ subtask: sst-2
 task: sentiment
 
 # A Twitter handle associated with the author(s).
-twitter: "@calpt"
+twitter: ""
 
 # The type of adapter (one of the options available in `adapter_type`.
 type: "text_task"
