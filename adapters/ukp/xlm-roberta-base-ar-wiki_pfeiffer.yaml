@@ -59,7 +59,7 @@ model_name: "xlm-roberta-base"
 
 # The model type.
 # Example: bert
-model_type: roberta
+model_type: xlm-roberta
 
 # The string identifier of the subtask this adapter belongs to.
 subtask: wiki
