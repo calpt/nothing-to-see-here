@@ -45,7 +45,7 @@ jobs:
         run: |
           pip install -r scripts/requirements.txt
           pip install torch
-          pip install git+https://${{ secrets.BOT_TOKEN }}@github.com/calpt/adapter-transformers.git
+          pip install git+https://${{ secrets.BOT_TOKEN }}@github.com/adapter-hub/adapter-transformers.git
       - name: Check download files
         run: |
           python scripts/check_download_files.py ${{ needs.check_format.outputs.added_modified }}
