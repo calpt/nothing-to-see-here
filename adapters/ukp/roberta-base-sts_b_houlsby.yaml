@@ -6,7 +6,20 @@
 author: "Andreas Rücklé"
 
 # A bibtex citation of the work related to this adapter.
-citation: 
+citation: |
+  @article{pfeiffer2020AdapterHub,
+      title={AdapterHub: A Framework for Adapting Transformers},
+      author={Jonas Pfeiffer,
+              Andreas R\"uckl\'{e},
+              Clifton Poth,
+              Aishwarya Kamath,
+              Ivan Vuli\'{c},
+              Sebastian Ruder,
+              Kyunghyun Cho,
+              Iryna Gurevych},
+      journal={ArXiv},
+      year={2020}
+  }
 
 # The string identifier of the adapter architecture (must be available in architecture).
 # Describes the adapter architecture used by this adapter
@@ -27,8 +40,8 @@ email: "rueckle@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "B1B12B8B3D858C30F260CA65FAFCD1B326459143"
-    sha256: "6500228120849FCCD99DC87B72BAC3FEEC8B1EB7A204A15A9A443501E29ED145"
+  - sha1: "83C55AD76F8F933022D452F8CEE17C277035276B"
+    sha256: "45548B85B8A08B2FFE1ACC3529684ADE7216F4A9AF5E8CBEFBDA3B3DD9E6A338"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/roberta-base/houlsby/roberta-base_sts-b_houlsby.zip"
     version: "1"
