@@ -40,7 +40,7 @@ email: "rueckle@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "B359475665202ECB5BF223D78D6543E368958D8D"
+  - sha1: "1927548A8F517FC68523E6E1F66B47931B46A7CE"
     sha256: "F763D6F0A72752FD76A3FA865011B2F0758A33FA6D32EAAC913937481CB0E4C4"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/roberta-large/houlsby/roberta-large_sts-b_houlsby.zip"
