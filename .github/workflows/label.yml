@@ -13,3 +13,4 @@ jobs:
     - uses: fjeremic/cron-labeler@0.2.0
       with:
         repo-token: "${{ secrets.BOT_TOKEN }}"
+        skip-labeled-prs: false
