@@ -1,0 +1,11 @@
+{
+  "config_id": "bb1c8efb82510bed",
+  "default_version": "1",
+  "files": {
+    "1": {
+      "sha1": "21160010DE74E26E6AEE2F2C95B53CB033B48CB8",
+      "sha256": "4886A3D0B0C2457124DF2B12DE249A57F33370691ECB3947242559F696C163E2",
+      "url": "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/roberta-base/houlsby/roberta-base_sts-b_houlsby.zip"
+    }
+  }
+}
