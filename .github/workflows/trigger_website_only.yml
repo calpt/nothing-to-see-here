@@ -7,6 +7,8 @@ on:
 
 jobs:
   repository_dispatch:
+    # TODO change when moving
+    if: github.repository_owner == 'calpt'
     runs-on: ubuntu-latest
     steps:
       - name: Trigger website build
