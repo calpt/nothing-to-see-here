@@ -40,8 +40,8 @@ email: "rueckle@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "1E09ACC0D0A58F48CFFC66061002C232ADFE5DD0"
-    sha256: "E922E18583F273F5072748321B91031D850B7ED58CE816B5AC71E65BFB55334A"
+  - sha1: "24DBDAE2E53C05CFC5A75F4B53958FE9F862608E"
+    sha256: "3147C48E0ECADEB3695C3CE895263CF4D9324667EE39795965BDD1A026E8776A"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/roberta-large/pfeiffer/roberta-large_sts-b_pfeiffer.zip"
     version: "1"

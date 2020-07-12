@@ -43,7 +43,7 @@ files:
   - sha1: "B80962907ACA970A03048C1D048F47CFAC3A984E"
     sha256: "7E4E55A974DF128CB2A8447EE7787B0D8D92098BE31B0C3697337EFBCBADA973"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/roberta-base/houlsby/roberta-base_sts-b_houlsby.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/roberta-base/pfeiffer/roberta-base_sts-b_pfeiffer.zip"
     version: "1"
     description: Achieves 90.39 Spearman rank correlation on the STS-Benchmark (devset)
 
