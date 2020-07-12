@@ -33,7 +33,7 @@ default_version: "1"
 
 # A short description of this adapter.
 description: |
-  STS-B adapter (with head) trained using the `run_glue.py` script with an extension for early stopping.
+  STS-B adapter (with head) trained using the `run_glue.py` script with an extension that retains the best checkpoint (out of 30 epochs).
 
 # A contact email of the author(s).
 email: "rueckle@ukp.informatik.tu-darmstadt"

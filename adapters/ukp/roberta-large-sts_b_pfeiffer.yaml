@@ -26,7 +26,7 @@ citation: |
 config:
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
   # Example: pfeiffer
-  using: houlsby
+  using: pfeiffer
 
 # The version to be downloaded if no version is explicitly stated.
 default_version: "1"
@@ -40,12 +40,12 @@ email: "rueckle@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "B359475665202ECB5BF223D78D6543E368958D8D"
-    sha256: "F763D6F0A72752FD76A3FA865011B2F0758A33FA6D32EAAC913937481CB0E4C4"
+  - sha1: "1E09ACC0D0A58F48CFFC66061002C232ADFE5DD0"
+    sha256: "E922E18583F273F5072748321B91031D850B7ED58CE816B5AC71E65BFB55334A"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/roberta-large/houlsby/roberta-large_sts-b_houlsby.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/roberta-large/pfeiffer/roberta-large_sts-b_pfeiffer.zip"
     version: "1"
-    description: Achieves 92.32 Spearman rank correlation on the STS-Benchmark (devset)
+    description: Achieves 92.23 Spearman rank correlation on the STS-Benchmark (devset)
 
 
 # A GitHub handle associated with the author(s).
