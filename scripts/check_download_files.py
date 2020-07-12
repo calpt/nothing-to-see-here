@@ -11,6 +11,12 @@ def _violation(s):
     print("VIOLATION:", s)
 
 
+def get_checksum(file):
+    for algo in ['sha1', 'sha256']:
+        if algo in file:
+            return algo, file[algo]
+
+
 def check_download(adapter_file):
     """Checks if the download links of the given adapter description file are valid.
     """
@@ -28,14 +34,15 @@ def check_download(adapter_file):
         return True
     model = AutoModel.from_config(config)
     for file in adapter_dict['files']:
+        checksum_algo, checksum = get_checksum(file)
         try:
-            # TODO add support for other checksums
             model.load_adapter(
                 file['url'],
                 adapter_dict['type'],
                 config=adapter_config,
                 load_as=file['version'],
-                checksum=file['sha1']
+                checksum_algo=checksum_algo,
+                checksum=checksum
             )
         except Exception as e:
             _violation("[{}]: {}".format(e.__class__.__name__, e))
