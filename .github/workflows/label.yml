@@ -6,8 +6,11 @@ on:
 
 jobs:
   label:
+    # TODO change when moving
+    if: github.repository_owner == 'calpt'
     runs-on: ubuntu-latest
     steps:
     - uses: fjeremic/cron-labeler@0.2.0
       with:
         repo-token: "${{ secrets.BOT_TOKEN }}"
+        skip-labeled-prs: false
