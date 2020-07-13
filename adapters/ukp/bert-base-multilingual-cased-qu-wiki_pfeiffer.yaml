@@ -40,13 +40,13 @@ email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "77533861a58987dc6b1639242dd6a08a89e755a4"
-    sha256: "c78b7c901d66a2735d88399f640f9cdd38ce085acd0efe4082ede98e4db7e708"
+  - sha1: "8aca18e3571c21ebe2740bcf845c75380bffe005"
+    sha256: "86eccbc64a8ae27d7e1666c5cf6699de9bacf0fe28ebf25cf45832512ee4567b"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/qu/bert-base-multilingual-cased/pfeiffer/qu_pfeiffer_gelu_nd.zip"
     version: "nd"
-  - sha1: "a0f2e91658e83095af874a78b31ce35421c61b76"
-    sha256: "1a290e2058dc8b4f3e3ee95a208d0e815b82f83f6f4bbd0c883e01866ecd5439"
+  - sha1: "a63c69edab7823caf0990c76d429451a2d891a47"
+    sha256: "889e3212da5c9027b8e09960c940a7862d73e941d1ea3a06caf19b5fe5a1004b"
     # Download URL pointing to a zip folder containing the adapter module.
     url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/qu/bert-base-multilingual-cased/pfeiffer/qu_pfeiffer_gelu.zip"
     version: "wd"
