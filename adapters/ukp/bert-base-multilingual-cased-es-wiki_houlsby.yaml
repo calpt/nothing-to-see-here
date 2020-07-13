@@ -42,7 +42,7 @@ files:
   - sha1: "f9441ca567b2938ccb09d242025720222c4a7faf"
     sha256: "2994ea98159523c184f9914fe4c01357107a2cc465d4780cf33ebd478650cdc0"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/es/bert-base-multilingual-cased/houlsby/es_houlsby_nd.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/es/bert-base-multilingual-cased/houlsby/es_houlsby_gelu_nd.zip"
     version: "nd"
   - sha1: "0b402045ec3441f090bb715db5b704822357de87"
     sha256: "2aac7a75e71939c6d3d178f3ecd5f54b98c501086a8b419b8569c5c2a52f6227"
