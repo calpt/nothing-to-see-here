@@ -3,8 +3,8 @@
   "default_version": "1",
   "files": {
     "1": {
-      "sha1": "B1B12B8B3D858C30F260CA65FAFCD1B326459143",
-      "sha256": "6500228120849FCCD99DC87B72BAC3FEEC8B1EB7A204A15A9A443501E29ED145",
+      "sha1": "83C55AD76F8F933022D452F8CEE17C277035276B",
+      "sha256": "45548B85B8A08B2FFE1ACC3529684ADE7216F4A9AF5E8CBEFBDA3B3DD9E6A338",
       "url": "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/sts-b/roberta-base/houlsby/roberta-base_sts-b_houlsby.zip"
     }
   }

@@ -51,6 +51,18 @@
                 }
             }
         },
+        "qnli": {
+            "b1017368d7a97b11": {
+                "versions": {
+                    "ukp": "adapters/ukp/roberta-base-qnli_houlsby.json"
+                }
+            },
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "ukp": "adapters/ukp/roberta-base-qnli_pfeiffer.json"
+                }
+            }
+        },
         "rte": {
             "bb1c8efb82510bed": {
                 "versions": {
@@ -100,6 +112,11 @@
     },
     "sts": {
         "mrpc": {
+            "b1017368d7a97b11": {
+                "versions": {
+                    "ukp": "adapters/ukp/roberta-base-mrpc_houlsby.json"
+                }
+            },
             "bb1c8efb82510bed": {
                 "versions": {
                     "ukp": "adapters/ukp/roberta-base-mrpc_pfeiffer.json"
