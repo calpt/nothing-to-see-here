@@ -40,15 +40,15 @@ email: "pfeiffer@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha1: "e04675ac5d9df3ef3bfe7d199dc766183b162589"
-    sha256: "30dd72f0f0a177fffdb72ce295d8d6593e4c0ee2982b0a980feb2df22f6f0264"
+  - sha1: "4a7a936e723f4a705e12e3f2251af68e07f42f0f"
+    sha256: "34f389c3e50887beacab0500dd61d732714c94c1954be920eac19e707b9b9ac2"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/ru/bert-base-multilingual-cased/houlsby_/ru_houlsby_gelu_nd.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/ru/bert-base-multilingual-cased/houlsby/ru_houlsby_gelu_nd.zip"
     version: "nd"
-  - sha1: "776099c0a4d6f75e196cbc11994cb872652f6488"
-    sha256: "3299bd9ebd6e04e2dd2986a5aed46604b7fe2a196bdff498268305db6de66811"
+  - sha1: "de86ac8fbcdb80e9e3d5c7576a8767dfebd3dc8b"
+    sha256: "fd1783202b76665250c34ad54e9069e0a46c5c77ce76cc9a573f82154f53de49"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/ru/bert-base-multilingual-cased/houlsby_/ru_houlsby_gelu.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_lang/ru/bert-base-multilingual-cased/houlsby/ru_houlsby_gelu.zip"
     version: "wd"
 #   - ...
 
