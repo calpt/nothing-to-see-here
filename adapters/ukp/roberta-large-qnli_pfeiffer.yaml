@@ -23,7 +23,7 @@ citation: |
 
 # The string identifier of the adapter architecture (must be available in architecture).
 # Describes the adapter architecture used by this adapter
-config: # TODO: REQUIRED
+config:
   # The name of the adapter config used by this adapter (a short name available in the `architectures` folder).
   # Example: pfeiffer
   using: pfeiffer
@@ -33,18 +33,18 @@ default_version: "1"
 
 # A short description of this adapter.
 description: |
-  MRPC adapter (with head) trained using the `run_glue.py` script with an extension that retains the best checkpoint (out of 30 epochs).
+  QNLI adapter (with head) trained using the `run_glue.py` script with an extension that retains the best checkpoint (out of 10 epochs).
 
 # A contact email of the author(s).
 email: "rueckle@ukp.informatik.tu-darmstadt"
 
 # A list of different versions of this adapter available for download.
 files:
-  - sha256: "9EBE530106B368C573A232F6D76AFB877236D79C12C0854E8F29AC54270E96B4"
+  - sha1: "00986647d6f9dbf6978b9fe76df509167a818821"
     # Download URL pointing to a zip folder containing the adapter module.
-    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/mrpc/roberta-large/pfeiffer/roberta-large_mrpc_pfeiffer.zip"
+    url: "https://public.ukp.informatik.tu-darmstadt.de/AdapterHub/text_task/qnli/roberta-large/pfeiffer/roberta-large_qnli_pfeiffer.zip"
     version: "1"
-    description: Achieves 92.28 F1 on the MRPC devset
+    description: Achieves 94.56 Accuracy on the QNLI devset
 
 
 # A GitHub handle associated with the author(s).
@@ -62,10 +62,10 @@ model_name: "roberta-large"
 model_type: roberta
 
 # The string identifier of the subtask this adapter belongs to.
-subtask: mrpc
+subtask: qnli
 
 # The string identifier of the task this adapter belongs to.
-task: sts
+task: nli
 
 # A Twitter handle associated with the author(s).
 twitter: "@arueckle"

@@ -48,7 +48,7 @@ files:
 
 
 # A GitHub handle associated with the author(s).
-github: "JoPfeiff"
+github: "arueckle"
 
 # The hidden size of the model
 hidden_size: 768
