@@ -1,4 +1,13 @@
 {
+    "argument": {
+        "ukpsent": {
+            "bb1c8efb82510bed": {
+                "versions": {
+                    "ukp": "adapters/ukp/bert-base-uncased-ukpsent1_pfeiffer.json"
+                }
+            }
+        }
+    },
     "comsense": {
         "cosmosqa": {
             "bb1c8efb82510bed": {
@@ -173,15 +182,6 @@
             "bb1c8efb82510bed": {
                 "versions": {
                     "ukp": "adapters/ukp/bert-base-uncased-sts-b_pfeiffer.json"
-                }
-            }
-        }
-    },
-    "ukpsent": {
-        "argument": {
-            "bb1c8efb82510bed": {
-                "versions": {
-                    "ukp": "adapters/ukp/bert-base-uncased-ukpsent1_pfeiffer.json"
                 }
             }
         }
