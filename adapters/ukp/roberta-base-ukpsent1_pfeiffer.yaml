@@ -55,11 +55,11 @@ model_name: "roberta-base"
 # Example: bert
 model_type: roberta
 
-# The string identifier of the subtask this adapter belongs to.
-subtask: argument
-
 # The string identifier of the task this adapter belongs to.
-task: ukpsent
+task: argument
+
+# The string identifier of the subtask this adapter belongs to.
+subtask: ukpsent
 
 # A Twitter handle associated with the author(s).
 twitter: "@PfeiffJo"
