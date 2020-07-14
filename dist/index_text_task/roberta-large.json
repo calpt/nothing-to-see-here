@@ -15,6 +15,11 @@
     },
     "sentiment": {
         "sst-2": {
+            "b1017368d7a97b11": {
+                "versions": {
+                    "ukp": "adapters/ukp/roberta-large-sst_houlsby.json"
+                }
+            },
             "bb1c8efb82510bed": {
                 "versions": {
                     "ukp": "adapters/ukp/roberta-large-sst_pfeiffer.json"
