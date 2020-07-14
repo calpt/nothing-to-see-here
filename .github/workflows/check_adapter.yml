@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: files
-        uses: jitterbit/get-changed-files@v1
+        uses: calpt/get-changed-files@master
         with:
           format: 'space-delimited'
       - uses: actions/setup-python@v2

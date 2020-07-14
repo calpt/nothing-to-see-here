@@ -33,7 +33,7 @@ Placed in `/dist/index_<type>/<model_name>.json`.
         <subtask>: {
             "default": "<org_name>/<file_name>.json",
             <config_id>: {
-                "default": "<org_name>",
+                "default": "<org_name>/<file_name>.json",
                 "versions": {
                     <org_name>: "<org_name>/<file_name>.json"
                     ...
